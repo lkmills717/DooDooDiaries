@@ -1,1 +1,18 @@
-// Specific CSS for your home-page
+h1, h2, p {
+  text-align: center;
+}
+
+.dashboard-hail {
+  background: white;
+}
+
+.dashboard-actions {
+  display: grid;
+  grid-template: 1fr;
+}
+
+@media (max-width: 420px) {
+  .container {
+    margin-top: 100px;
+  }
+}
