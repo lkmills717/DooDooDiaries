@@ -1,2 +1,30 @@
 // Import page-specific CSS files here.
 @import "home";
+
+h1 {
+  font-family: 'Mali', cursive;
+}
+
+h2, p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+.btn {
+  align-items: center;
+  background: #743ad5;
+  transition: 0.3s;
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  background: #d53a9d;
+  color: white;
+}
+
+@media (max-width: 420px) {
+  .bt {
+    min-width:150px;
+  }
+}
