@@ -13,6 +13,10 @@ class MovementsController < ApplicationController
     end
 
     def create
+        raise
+        if params["movement"]["feeling"] == "🎈"
+            raise
+        end
         @user = current_user
         @movement = Movement.new(movement_params)
         @movement.user = @user
