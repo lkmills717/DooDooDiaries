@@ -32,3 +32,10 @@ h2, p, legend {
     min-width:150px;
   }
 }
+
+@media (max-width: 420px) {
+  .container {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+}
