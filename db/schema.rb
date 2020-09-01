@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_152040) do
+ActiveRecord::Schema.define(version: 2020_09_01_110807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_08_31_152040) do
     t.integer "feeling"
     t.integer "effort"
     t.integer "duration"
-    t.integer "type"
+    t.integer "shape"
     t.integer "color"
     t.integer "smell"
     t.text "comments"
