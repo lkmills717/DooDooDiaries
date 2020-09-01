@@ -1,0 +1,10 @@
+<div class="container">
+
+<div class="row justify-content-center align-items-center">
+<div class="cards mb-5 w-100">
+  <% @movements.each do |movement| %>
+      <%= link_to "#{movement.id}", "/movements/#{movement.id}", class: "text-center" %>
+    </div>
+  <% end %>
+</div>
+</div>

@@ -199,3 +199,17 @@
     </form>
   </center>  
 </div>
+
+
+<%= simple_form_for @movement do |f| %>
+  <%= f.input :feeling, collection: ['🎈', '🎆', '🎪', '🥇', '😭'] %>
+  <%= f.input :effort, collection: ["eazy peazy", "had to wait but no force required", "had to push a little", "OH MY GOD OWWW😨"] %>
+  <%= f.input :duration, collection: ["less than 1 minute", "5 - 10 mins", "10 - 15 mins", "more than 15 mins"] %>
+  <%= f.input :color, collection: ["🤎", "💚", "❤", "💛", "🤍", "🖤"] %>
+  <%= f.input :smell, collection: ["🌹", "🦨", "🤢", "🤮"] %>
+  <%= f.input :shape, collection: [1, 2, 3, 4, 5, 6, 7] %>
+  <%= f.input :comments %>
+
+  <%= f.submit class: "btn btn-secondary btn-lg text-center" %>
+
+<% end %>
