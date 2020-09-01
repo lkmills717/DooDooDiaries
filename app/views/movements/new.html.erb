@@ -200,16 +200,17 @@
   </center>  
 </div>
 
-
+<div class="container mt-3">
 <%= simple_form_for @movement do |f| %>
-  <%= f.input :feeling, collection: ['🎈', '🎆', '🎪', '🥇', '😭'] %>
-  <%= f.input :effort, collection: ["eazy peazy", "had to wait but no force required", "had to push a little", "OH MY GOD OWWW😨"] %>
-  <%= f.input :duration, collection: ["less than 1 minute", "5 - 10 mins", "10 - 15 mins", "more than 15 mins"] %>
-  <%= f.input :color, collection: ["🤎", "💚", "❤", "💛", "🤍", "🖤"] %>
-  <%= f.input :smell, collection: ["🌹", "🦨", "🤢", "🤮"] %>
-  <%= f.input :shape, collection: [1, 2, 3, 4, 5, 6, 7] %>
-  <%= f.input :comments %>
+  <%= f.input :feeling, label: "How are you feeling?", collection: ['😁', '😀', '😐', '😔', '😰'] %>
+  <%= f.input :effort, label: "How hard are you trying?", collection: ["eazy peazy", "had to wait but no force required", "had to push a little", "OH MY GOD OWWW😨"] %>
+  <%= f.input :duration, label: "How long have you been trying?", collection: ["less than 1 minute", "1 -5 mins", "5 - 10 mins", "10 - 15 mins", "more than 15 mins"] %>
+  <%= f.input :color, label: "What color is it?", collection: ["🤎", "💚", "💛", "🤍", "❤", "🖤"] %>
+  <%= f.input :smell, label: "How does it smell?", collection: ["like roses🌹", "a little stinky but normal🦨", "I feel bad for the person after me🤢", "WOWWW get me outta here!🤮"] %>
+  <%= f.input :shape, label: "Please select the picture that best describes the shape:", collection: [1, 2, 3, 4, 5, 6, 7] %>
+  <%= f.input :comments, label: "Please add any additional comments: " %>
 
   <%= f.submit class: "btn btn-secondary btn-lg text-center" %>
 
 <% end %>
+</div>
