@@ -1,5 +1,5 @@
 class MovementsController < ApplicationController
-    before_action :set_movement, only: [:show, :edit, :update, :destroy]\
+    before_action :set_movement, only: [:show, :edit, :update, :destroy]
 
     def index
         @movement = Movement.all
@@ -13,8 +13,11 @@ class MovementsController < ApplicationController
     end
 
     def create
+        @user = current_user
         @movement = Movement.new(movement_params)
+        @movement.user = @user
         if @movement.save
+            flash[:notice] = "🎉You have successfully logged your poop!💩"
             redirect_to movement_path(@movement)
         else
             render 'new'
