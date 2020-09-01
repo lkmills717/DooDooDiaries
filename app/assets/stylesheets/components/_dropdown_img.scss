@@ -38,30 +38,20 @@
 
 .dropdown:hover .dropdown-content { 
   display: block; 
-} 
-
-.dropdown:hover .dropbtn { 
-  background-color: #d53a9d; 
-}
-
-.dropdown:active .dropbtn { 
-  background-color: #d53a9d; 
-}
-
-.dropdown-toggle {
-  width: 65vw;
 }
 
 .dropdown-item {
   text-align: center;
 }
 
-.dropdown-menu {
-  width: -webkit-fill-available;
-}
+
 
 @media (max-width: 420px) {
-  .dropbtn{
-    
- }
+  .dropdown-menu {
+    width: -webkit-fill-available;
+  }
+
+  .dropdown-toggle {
+    width: 65vw;
+  }
 }
