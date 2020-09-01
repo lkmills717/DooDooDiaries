@@ -1,118 +1,193 @@
   <center>
+    <form action="">
+      <div class="dropdown mb-4"> 
+        <button class="btn dropdown-toggle"
+                type="button" 
+                id="dropdownMenuButton" 
+                data-toggle="dropdown"
+                aria-haspopup="true" 
+                aria-expanded="false"> 
+            How are you feeling?
+        </button> 
 
-  <form>
-    <fieldset>
-      <legend>How are you feeling?</legend>
-      <p>
-          <label>Select list</label>
-          <select id = "myList">
-            <option value = "1">😁</option>
-            <option value = "2">😀</option>
-            <option value = "3">😐</option>
-            <option value = "4">😔</option>
-            <option value = "5">😰</option>
-          </select>
-      </p>
-    </fieldset>
+        <ul class="dropdown-menu dropdown-menu-right" 
+            aria-labelledby="dropdownMenuButton"> 
+          <li class="dropdown-item" value = "1"> 
+            😁
+          </li> 
+          <li class="dropdown-item" value = "2"> 
+            😀
+          </li> 
+          <li class="dropdown-item" value = "3"> 
+            😐
+          </li> 
+          <li class="dropdown-item" value = "4"> 
+            😔
+          </li>
+          <li class="dropdown-item" value = "5"> 
+            😰
+          </li>
+        </ul> 
+      </div>
 
-    <fieldset>
-      <legend>How much effort you're putting in?</legend>
-      <p>
-          <label>Select list</label>
-          <select id = "myList">
-            <option value = "1">It was easy!</option>
-            <option value = "2">Some effort, but it was ok.</option>
-            <option value = "3">It took a good effort.</option>
-            <option value = "4">It took a lot of effort.</option>
-            <option value = "5">It was very hard in an uncommon level.</option>
-          </select>
-      </p>
-    </fieldset>
+      <div class="dropdown mb-4"> 
+        <button class="btn dropdown-toggle"
+                type="button" 
+                id="dropdownMenuButton" 
+                data-toggle="dropdown"
+                aria-haspopup="true" 
+                aria-expanded="false"> 
+            Effort?
+        </button> 
 
-    <fieldset>
-      <legend>How long have you been trying?</legend>
-      <p>
-          <label>Select list</label>
-          <select id = "myList">
-            <option value = "1">Less than a minute.</option>
-            <option value = "2">Between one to five minutes.</option>
-            <option value = "3">Between five to ten minutes.</option>
-            <option value = "4">Between five to fifteen minutes.</option>
-            <option value = "5">More than fifteen minutes.</option>
-          </select>
-      </p>
-    </fieldset>
+        <ul class="dropdown-menu dropdown-menu-right" 
+            aria-labelledby="dropdownMenuButton"> 
+          <li class="dropdown-item" value = "1"> 
+            Easy, no effort
+          </li> 
+          <li class="dropdown-item" value = "2"> 
+            A bit of effort
+          </li> 
+          <li class="dropdown-item" value = "3"> 
+            Some effort
+          </li> 
+          <li class="dropdown-item" value = "4"> 
+            Lots of effort
+          </li>
+          <li class="dropdown-item" value = "5"> 
+            Huge effort
+          </li>
+        </ul> 
+      </div>
 
-    <fieldset>
-      <legend>How is the smell?</legend>
-      <p>
-          <label>Select list</label>
-          <select id = "myList">
-            <option value = "1">Nothing new.</option>
-            <option value = "2">Different, but not aggravating.</option>
-            <option value = "3">Foul smelling.</option>
-          </select>
-      </p>
-    </fieldset>
+      <div class="dropdown mb-4"> 
+        <button class="btn dropdown-toggle"
+                type="button" 
+                id="dropdownMenuButton" 
+                data-toggle="dropdown"
+                aria-haspopup="true" 
+                aria-expanded="false"> 
+            Duration?
+        </button> 
 
-    <fieldset>
-      <legend>Which color is it?</legend>
-      <p>
-          <label>Select list</label>
-          <select id = "myList">
-            <option value = "1">Any shade of brown</option>
-            <option value = "2">A little green.</option>
-            <option value = "3">Super green.</option>
-            <option value = "4">Red.</option>
-            <option value = "5">Yellow.</option>
-            <option value = "6">Pale, white, clay-colored.</option>
-            <option value = "7">Black.</option>
-          </select>
-      </p>
-    </fieldset>
+        <ul class="dropdown-menu dropdown-menu-right" 
+            aria-labelledby="dropdownMenuButton"> 
+          <li class="dropdown-item" value = "1"> 
+            Less than a minute
+          </li> 
+          <li class="dropdown-item" value = "2"> 
+            Five to ten minutes
+          </li> 
+          <li class="dropdown-item" value = "3"> 
+            Ten to fifteen minutes
+          </li> 
+          <li class="dropdown-item" value = "4"> 
+            More than fifteen minutes
+          </li>
+        </ul> 
+      </div>
 
-    
-    <div class="dropdown"> 
-      <button class="btn dropdown-toggle"
-              type="button" 
-              id="dropdownMenuButton" 
-              data-toggle="dropdown"
-              aria-haspopup="true" 
-              aria-expanded="false"> 
-          Please select the image below that best describe your doo doo!
-      </button> 
+      <div class="dropdown mb-4"> 
+        <button class="btn dropdown-toggle"
+                type="button" 
+                id="dropdownMenuButton" 
+                data-toggle="dropdown"
+                aria-haspopup="true" 
+                aria-expanded="false"> 
+            Color?
+        </button> 
 
-      <ul class="dropdown-menu" 
-          aria-labelledby="dropdownMenuButton"> 
-        <li class="dropdown-item"> 
-          <img src="https://i.imgur.com/kliYgem.png"
-          width="75" height="40">
-        </li> 
-        <li class="dropdown-item"> 
-          <img src="https://i.imgur.com/XDzw3uN.png" 
-          width="75" height="40">
-        </li> 
-        <li class="dropdown-item"> 
-          <img src="https://i.imgur.com/uQRhzrV.png" 
-          width="75" height="40">
-        </li> 
-        <li class="dropdown-item"> 
-          <img src="https://i.imgur.com/CPQNjaP.png"
-          width="75" height="40">
-        </li> 
-        <li class="dropdown-item"> 
-          <img src="https://i.imgur.com/9uVW0r5.png"
-          width="75" height="40">
-        </li> 
-        <li class="dropdown-item"> 
-          <img src="https://i.imgur.com/yiZLVyf.png"
-          width="75" height="40">
-        </li> 
-        <li class="dropdown-item"> 
-          <img src="https://i.imgur.com/mGfzmyJ.png"
-          width="75" height="40">
-        </li> 
-      </ul> 
-    </div> 
-  </form>
-</center>
+        <ul class="dropdown-menu dropdown-menu-right" 
+            aria-labelledby="dropdownMenuButton"> 
+          <li class="dropdown-item" value = "1"> 
+            Any shade of brown
+          </li> 
+          <li class="dropdown-item" value = "2"> 
+            A little green
+          </li> 
+          <li class="dropdown-item" value = "3"> 
+            Super green
+          </li> 
+          <li class="dropdown-item" value = "4"> 
+            Red
+          </li> 
+          <li class="dropdown-item" value = "5"> 
+            Yellow
+          </li> 
+          <li class="dropdown-item" value = "6"> 
+            Pale, white, clay-colored
+          </li> 
+          <li class="dropdown-item" value = "7"> 
+            Black
+          </li> 
+        </ul> 
+      </div>
+
+      <div class="dropdown mb-4"> 
+        <button class="btn dropdown-toggle"
+                type="button" 
+                id="dropdownMenuButton" 
+                data-toggle="dropdown"
+                aria-haspopup="true" 
+                aria-expanded="false"> 
+            Smell?
+        </button> 
+
+        <ul class="dropdown-menu dropdown-menu-right" 
+            aria-labelledby="dropdownMenuButton"> 
+          <li class="dropdown-item" value = "1"> 
+            Nothing unnusual
+          </li> 
+          <li class="dropdown-item" value = "2"> 
+            It is a bit strange
+          </li> 
+          <li class="dropdown-item" value = "3"> 
+            Fould odor
+          </li> 
+        </ul> 
+      </div>
+      
+      <div class="dropdown mb-4"> 
+        <button class="btn dropdown-toggle"
+                type="button" 
+                id="dropdownMenuButton" 
+                data-toggle="dropdown"
+                aria-haspopup="true" 
+                aria-expanded="false"> 
+            Select shape
+        </button> 
+
+        <ul class="dropdown-menu dropdown-menu-right" 
+            aria-labelledby="dropdownMenuButton"> 
+          <li class="dropdown-item"> 
+            <img src="https://i.imgur.com/kliYgem.png"
+            width="75" height="40">
+          </li> 
+          <li class="dropdown-item"> 
+            <img src="https://i.imgur.com/XDzw3uN.png" 
+            width="75" height="40">
+          </li> 
+          <li class="dropdown-item"> 
+            <img src="https://i.imgur.com/uQRhzrV.png" 
+            width="75" height="40">
+          </li> 
+          <li class="dropdown-item"> 
+            <img src="https://i.imgur.com/CPQNjaP.png"
+            width="75" height="40">
+          </li> 
+          <li class="dropdown-item"> 
+            <img src="https://i.imgur.com/9uVW0r5.png"
+            width="75" height="40">
+          </li> 
+          <li class="dropdown-item"> 
+            <img src="https://i.imgur.com/yiZLVyf.png"
+            width="75" height="40">
+          </li> 
+          <li class="dropdown-item"> 
+            <img src="https://i.imgur.com/mGfzmyJ.png"
+            width="75" height="40">
+          </li> 
+        </ul> 
+      </div> 
+    </form>
+  </center>

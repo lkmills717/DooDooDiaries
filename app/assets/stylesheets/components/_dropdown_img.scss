@@ -10,7 +10,7 @@
 .dropdown { 
   position: relative; 
   display: inline-block;
-  padding-bottom: 400px; 
+  // padding-bottom: 400px; 
 } 
 
 .dropdown-content { 
@@ -21,7 +21,8 @@
   overflow: auto;
   box-shadow: 0px 8px 16px  
       0px rgba(0, 0, 0, 0.2); 
-  z-index: 1; 
+  z-index: 1;
+  text-align: center;
 } 
 
 .dropdown-content a { 
@@ -45,4 +46,22 @@
 
 .dropdown:active .dropbtn { 
   background-color: #d53a9d; 
-} 
+}
+
+.dropdown-toggle {
+  width: 65vw;
+}
+
+.dropdown-item {
+  text-align: center;
+}
+
+.dropdown-menu {
+  width: -webkit-fill-available;
+}
+
+@media (max-width: 420px) {
+  .dropbtn{
+    
+ }
+}
