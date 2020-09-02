@@ -18,7 +18,7 @@
         <% end %>
       </li>
       <li class="<%= if yield(:menu) == 'profile' then ' active' end %>">
-        <%= link_to root_path do %>
+        <%= link_to profile_path do %>
           <figure>
             <i class="fas fa-user"></i>
             <figcaption>Profile</figcaption>
