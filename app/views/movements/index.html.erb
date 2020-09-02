@@ -1,10 +1,20 @@
 <div class="container">
-
-<div class="row justify-content-center align-items-center">
-<div class="cards mb-5 w-100">
-  <% @movements.each do |movement| %>
-      <%= link_to "#{movement.id}", "/movements/#{movement.id}", class: "text-center" %>
+  
+  <div class="row opener text-center justify-content-center">
+    <div class="col-8">
+     <h1 class="index-quote">Shit happens.</h1>
+     <br>
+     <p>A collection of my best and worst poop memories📘</p>  
     </div>
-  <% end %>
-</div>
+  </div>
+
+  <div class="row justify-content-center align-items-center">
+    <div class="cards mb-5 w-10">
+      <% @movements.each do |movement| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.imgur.com/OELHk5p.jpg)">
+          <%= link_to "Poop##{movement.id}", "/movements/#{movement.id}", class: "text-center" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
