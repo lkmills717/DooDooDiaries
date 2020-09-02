@@ -3,9 +3,9 @@
   <%= simple_form_for @movement do |f| %>
     <%= f.input :feeling, label: "How are you feeling?", collection: ['😁', '😀', '😐', '😔', '😰'] %>
     <%= f.input :effort, label: "How hard are you trying?", collection: ["It was easy", "It was normal, a bit of effort ", "It was hard", "It was very hard"] %>
-    <%= f.input :duration, label: "How long have you been trying?", collection: ["less than 1 minute", "1 -5 mins", "5 - 10 mins", "10 - 15 mins", "more than 15 mins"] %>
-    <%= f.input :color, label: "What color is it?", collection: ["Any shade of brown", "A little green", "Super green", "Red", "Yellow", "Pale, white, clay-colored", "Black"] %>
-    <%= f.input :smell, label: "How does it smell?", collection: ["A normal odor 🌹", "Worse than normal ☠"] %>
+    <%= f.input :duration, label: "How long have you been trying?", collection: ["less than 1 minute", "1 -5 minutes", "5 - 10 minutes", "10 - 15 minutes", "more than 15 minutes"] %>
+    <%= f.input :color, label: "What color is it?", collection: ["any shade of brown", "a little green", "super green", "red", "yellow", "pale, white, clay-colored", "black"] %>
+    <%= f.input :smell, label: "How does it smell?", collection: ["a normal odor 🌹", "worse than normal ☠"] %>
     <%= f.input :shape, label: "Please select the picture that best describes the shape:", collection: [1, 2, 3, 4, 5, 6, 7] %>
     <%= f.input :comments, label: "Please add any additional comments: " %>
 

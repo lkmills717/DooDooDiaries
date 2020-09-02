@@ -1,2 +1,17 @@
-<h3><%= "Poop ##{@movement.id}: #{@movement.feeling} #{@movement.effort} #{@movement.duration} #{@movement.color} #{@movement.smell} #{@movement.shape} #{@movement.comments}"  %></h3>
-<h3><%= "Time: #{@movement.created_at}" %> </h3>
+<div class="container">
+  <h2 class="mt-5">This is what you reported about Doo Doo # <%= "#{@movement.id}" %> </h2>
+  <div class="movement-report">
+  
+      <p>It seems you were feeling <%= "#{@movement.feeling}" %> about it.</p>
+  
+      <p> <%= "#{@movement.effort}" %> it lasted <%= "#{@movement.duration}" %>.</p> 
+  
+      <p> It's color was <%= "#{@movement.color}" %> and smelled like it was <%= "#{@movement.smell}" %>.</p> 
+   
+ 
+      <p> In the Bristol stool scale, it was a <%= "#{@movement.shape}" %>.</p>
+
+      <%= image_tag @movement.img_url, class: "dashboards_movement_img" %>
+  
+  </div>
+</div>

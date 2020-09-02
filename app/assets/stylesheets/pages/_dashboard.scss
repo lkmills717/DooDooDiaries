@@ -1,8 +1,17 @@
-h1, h2, p {
-  text-align: center;
-}
+// .dashboard-actions h1, h2, p {
+//   text-align: center;
+// }
 
 .dashboard-actions {
   display: grid;
   grid-template: 1fr;
+}
+
+.dashboards_movement_img {
+  width: 100px;
+}
+
+.movement-report {
+  margin-bottom: 100px;
+  padding: 10px;
 }
