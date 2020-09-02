@@ -13,7 +13,6 @@ class MovementsController < ApplicationController
     end
 
     def create
-        raise
         @user = current_user
         @movement = Movement.new(movement_params)
         @movement.user = @user
