@@ -1,11 +1,11 @@
 
 <div class="container my-3 meals-form">
-<%= simple_form_for @meal do |f| %>
-  <%= f.input :description, label: "Please describe what you have recently consumed:" %>
+  <%= simple_form_for @meal do |f| %>
+    <%= f.input :description, label: "Please describe what you have recently consumed:" %>
 
-  <%= f.button :submit, "Submit", class: "btn btn-secondary btn-lg text-center" %>
+    <%= f.button :submit, "Submit", class: "btn-block btn btn-secondary btn-lg text-center" %>
 
-<% end %>
+  <% end %>
 
 <br>
 <br>
