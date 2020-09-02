@@ -13,7 +13,6 @@ class MovementsController < ApplicationController
     end
 
     def create
-        raise
         @user = current_user
         @movement = Movement.new(movement_params)
         @movement.user = @user
@@ -44,7 +43,7 @@ class MovementsController < ApplicationController
 
     private
     def movement_params
-        params.require(:movement).permit(:id, :feeling, :effort, :duration, :type, :color, :smell, :comments)
+        params.require(:movement).permit(:id, :feeling, :effort, :duration, :shape, :color, :smell, :comments)
     end
 
     def set_movement

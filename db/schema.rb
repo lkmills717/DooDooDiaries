@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_140010) do
+ActiveRecord::Schema.define(version: 2020_09_02_134907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 2020_09_01_140010) do
   end
 
   create_table "movements", force: :cascade do |t|
-    t.integer "feeling"
-    t.integer "effort"
-    t.integer "duration"
-    t.integer "shape"
-    t.integer "color"
-    t.integer "smell"
+    t.string "feeling"
+    t.string "effort"
+    t.string "duration"
+    t.string "shape"
+    t.string "color"
+    t.string "smell"
     t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
