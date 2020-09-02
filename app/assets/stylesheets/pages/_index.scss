@@ -27,15 +27,19 @@ h2, h3, p {
   color: white;
 }
 
-@media (max-width: 420px) {
-  .bt {
-    min-width:150px;
-  }
+.movements-form {
+  margin-bottom: 100px;
 }
 
 @media (max-width: 420px) {
-  .container {
-    margin-top: 50px;
-    margin-bottom: 25px;
-  }
+  // .bt {
+  //   min-width:150px;
+  // }
+}
+
+@media (max-width: 420px) {
+  // .container {
+  //   margin-top: 50px;
+  //   margin-bottom: 25px;
+  // }
 }
