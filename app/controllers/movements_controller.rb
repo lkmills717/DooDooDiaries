@@ -2,7 +2,7 @@ class MovementsController < ApplicationController
     before_action :set_movement, only: [:show, :edit, :update, :destroy]
 
     def index
-        @movement = Movement.all
+        @movements = Movement.all
     end
 
     def show

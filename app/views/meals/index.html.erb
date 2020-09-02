@@ -1,0 +1,18 @@
+<div class="container">
+  
+  <div class="row opener text-center justify-content-center">
+    <div class="col-8">
+     <h1 class="index-quote">My food diary!🥕</h1>
+    </div>
+  </div>
+
+  <div class="row justify-content-center align-items-center">
+    <div class="cards mb-5 w-10">
+      <% @meals.each do |meal| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.imgur.com/OELHk5p.jpg)">
+          <%= link_to "Meal##{meal.id}", "/meals/#{meal.id}", class: "text-center" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
