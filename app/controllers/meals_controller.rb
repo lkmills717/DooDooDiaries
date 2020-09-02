@@ -2,7 +2,7 @@ class MealsController < ApplicationController
     before_action :set_meal, only: [:show, :edit, :update, :destroy]
     
     def index
-        @meal = Meal.all
+        @meals = Meal.all
     end
 
     def show
@@ -13,8 +13,11 @@ class MealsController < ApplicationController
     end
 
     def create
+        @user = current_user
         @meal = Meal.new(meal_params)
+        @meal.user = @user
         if @meal.save
+            flash[:notice] = "🎉Thank you for recording your meal!🍕Looking forward to seeing what comes out!💩"
             redirect_to meal_path(@meal)
         else
             render 'new'

@@ -14,6 +14,12 @@ h2, h3, p {
   font-weight: lighter;
 }
 
+ul {
+  list-style: none;
+}
+
+
+
 .btn {
   align-items: center;
   background: #743ad5;
@@ -30,6 +36,16 @@ h2, h3, p {
 .movements-form {
   margin-bottom: 100px;
 }
+
+.movement-report {
+  background: white;
+  margin-top: 10px;
+  -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
+  -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
+  box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
+}
+
+
 
 @media (max-width: 420px) {
   // .bt {

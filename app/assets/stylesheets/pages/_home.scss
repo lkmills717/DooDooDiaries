@@ -1,17 +1,11 @@
-h1, h2, p {
-  text-align: center;
-}
 
-.dashboard-hail {
-}
+@media (max-width: 767px) {
 
-.dashboard-actions {
-  display: grid;
-  grid-template: 1fr;
-}
+    img {
+      width: 100%;
+    }
+    .home-img {
+      margin-top: 40px;
+    }
 
-@media (max-width: 420px) {
-  // .container {
-  //   margin-top: 100px;
-  // }
 }

@@ -2,7 +2,7 @@ class MovementsController < ApplicationController
     before_action :set_movement, only: [:show, :edit, :update, :destroy]
 
     def index
-        @movement = Movement.all
+        @movements = Movement.all
     end
 
     def show
@@ -43,7 +43,7 @@ class MovementsController < ApplicationController
 
     private
     def movement_params
-        params.require(:movement).permit(:id, :feeling, :effort, :duration, :type, :color, :smell, :comments)
+        params.require(:movement).permit(:id, :feeling, :effort, :duration, :shape, :color, :smell, :comments)
     end
 
     def set_movement

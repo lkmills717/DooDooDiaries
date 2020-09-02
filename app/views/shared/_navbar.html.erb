@@ -21,7 +21,6 @@
           <%= image_tag "https://i.imgur.com/gC1O9Cw.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Profile", profile_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
@@ -32,6 +31,7 @@
         <li>
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link, btn btn-secondary m-1" %>
         </li>
+
       <% end %>
     </ul>
   </div>
