@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :meals
 
   get '/dashboard', to: 'users#dashboard'
+  get '/profile', to: 'users#profile'
 end

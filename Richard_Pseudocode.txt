@@ -1,0 +1,49 @@
+Richard_Pseudocode.txt
+Pseudocode for Profile page
+-Add a view file called profile.html.erb
+-Need a route for the page
+-Need a defined action in the controller
+-Add the link to the navbar
+
+stage #1
+-In the routes file, copy the dashboard route and change it to profile. (done)
+-In the users controller, add the action profile. (done)
+-Inside the profile action, add @movement = current_user.movements.last
+ @meal = current_user.meals.last(done)
+-Add a view file in the users folder (profile.html.erb)(done)
+-Inside the view, put the word "Hi"(done)
+-In the browser, visit the page to see the word "Hi"(done)
+
+stage #2
+-Open Navbar file.
+-Edit the tect of the action link to "Profile"(done)
+-rails routes find the prefix for the profile path(done)
+-Update the path of the navbar file to be the correct path for the profile(done).
+-Test the link out in the browser.(done)
+
+stage #3 (refresh after every change)
+-Add a movement and a meal for your user(try to do it in firefox). If that doesn't work, try the code below in console.
+-Display user_name <%= current_user.name%>
+-Display email <%= current_user.email%>
+-Display movement attributes example: <%= @movement.feeling%>
+-Display meal attributes <%= @meal.description%>
+-Add Divs and Html to make it look good.
+
+stage #4
+-Create a meal object
+-Copy example from Github paste it below what I have on the profile page.
+-Change every ice cream cone to be the word "blah yoda"
+
+
+user = User.find_by_email("your@email.com")
+Movement.create!({
+  user: user,
+  feeling: "",
+  effort: "",
+  duration: "",
+  shape: "",
+  color: "",
+  smell: "",
+  comments: "",
+})
+Meal.create!(user: user, description: "Put a description here")
