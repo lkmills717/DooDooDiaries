@@ -23,12 +23,7 @@
   background: #d53a9d;  
 }
 
-.img-fluid {
-  max-width: 50%;
-  height: auto;
-}
-
-@media (max-width: 420px) {
+@media (max-width: 767px) {
   .navbar-lewagon .navbar-collapse {
     text-align: center;
   }

@@ -4,12 +4,13 @@
   padding: 16px; 
   font-size: 16px; 
   border: none; 
-  cursor: pointer; 
+  cursor: pointer;
+  width: 150px;  
 } 
 
 .dropdown { 
   position: relative; 
-  display: inline-block;
+  text-align: center;
   // padding-bottom: 400px; 
 } 
 
@@ -44,14 +45,12 @@
   text-align: center;
 }
 
-
-
 @media (max-width: 420px) {
-  .dropdown-menu {
-    width: -webkit-fill-available;
-  }
+  // .dropdown-menu {
+  //   width: -webkit-fill-available;
+  // }
 
-  .dropdown-toggle {
-    width: 45vw;
-  }
+  // .dropdown-toggle {
+  //   width: 45vw;
+  // }
 }

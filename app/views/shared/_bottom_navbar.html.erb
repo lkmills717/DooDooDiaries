@@ -1,0 +1,30 @@
+<nav id="bottom-nav">
+  <div class="container">
+    <ul id="bottom-list" class="flex-container">
+      <li class="<%= if yield(:menu) == 'teams' then ' active' end %>">
+        <%= link_to dashboard_path do %>
+          <figure>
+            <i class="fas fa-home"></i>
+            <figcaption>Dashboard</figcaption>
+          </figure>
+        <% end %>
+      </li>
+      <li class="<%= if yield(:menu) == 'about' then ' active' end %>">
+        <%= link_to root_path do %>
+          <figure>
+            <i class="far fa-building"></i>
+            <figcaption>About Us</figcaption>
+          </figure>
+        <% end %>
+      </li>
+      <li class="<%= if yield(:menu) == 'profile' then ' active' end %>">
+        <%= link_to root_path do %>
+          <figure>
+            <i class="fas fa-user"></i>
+            <figcaption>Profile</figcaption>
+          </figure>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,54 @@
+// mobile bottom shortcut navbar
+@media screen and (min-width: 767px) {
+  #bottom-nav  {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+
+  #bottom-nav {
+    text-align: center;
+    font-size: 14px;
+    color: $white;
+    padding: 0;
+    box-shadow: -1px 0px 1px 1px $body-bg;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background: white;
+    bottom: 0px;
+    z-index: 99;
+  }
+
+  #bottom-nav #bottom-list {
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  #bottom-list > li {
+    flex-grow: 1;
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  #bottom-list > li > a {
+    color: $gray;
+    .far, .fas {
+      color: $gray;
+    }
+  }
+
+  #bottom-list > li.active {
+    font-weight: 900;
+    .far, .fas {
+      color: $primary;
+    }
+  }
+
+  #bottom-list > li > a figure {
+    margin: 0;
+  }
+
+}
