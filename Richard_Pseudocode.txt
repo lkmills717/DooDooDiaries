@@ -47,3 +47,10 @@ Movement.create!({
   comments: "",
 })
 Meal.create!(user: user, description: "Put a description here")
+
+If/else statement
+-create space around statement that needs to be hidden.
+-Add the alternaternative text with space around it above.
+(should have 3 empty lines and x2 possible options).
+-Add the if/else/end lines with correct ice cream cones.
+-Add the requirement inside the if statement.
