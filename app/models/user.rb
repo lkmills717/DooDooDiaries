@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :meals, dependent: :destroy
   has_many :movements, dependent: :destroy
+  validates :meals, presence: false
+  has_one_attached :photo
 end
