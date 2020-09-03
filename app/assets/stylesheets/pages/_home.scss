@@ -3,6 +3,7 @@
 
     img {
       width: 100%;
+  
     }
     .home-img {
       margin-top: 40px;
@@ -10,10 +11,145 @@
 
 }
 
-.landing-page {
 
+.home-btns {
+  width: 100%;
+  padding-top: 100px;
+  display: none;
 }
 
-.logo {
-  position: absolute;
+.home-btns--on {
+  width: 100%;
+  padding-top: 100px;
+  animation: wake-btns 0.9s;
 }
+
+@keyframes wake-btns {
+  0%   {left: 0px; opacity: 0.6; background: #333}
+  25%  {left: 100px; opacity: 0.7; background: #333}
+  50%  {left: 100px; opacity: 0.8; background: #333}
+  75%  {left: 0px; opacity: 0.9; background: #333}
+  100% {left: 0px; opacity: 1; background: #333;}
+}
+
+.invitation {
+  background-color: #743ad5;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin: 125px auto;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.invitation__off {
+  background-color: #743ad5;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 125px auto;
+  opacity: 0.6;
+  transition: 0.3s;
+  padding: 2px;
+  display: none;
+}
+
+// Curtain
+
+// .curtain {
+//   width: 100%; /* Ensures the component is the full screen width */
+//   height: 50vh; /* We're using this for demo purposes */
+//   overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
+// }
+  
+// .curtain__wrapper {
+//   width: 100%;
+//   height: 50%;
+// }
+      
+// .curtain__panel {
+//   background: #eee;
+//   width: 50%; /* Each panel takes up half the container */
+//   height: 50vh; /* Used for demo purposes */
+//   float: left; /* Makes sure panels are side-by-side */
+//   position: relative; /* Needed to define the z-index */
+//   z-index: 2; /* Places the panels in front of the prize */
+  
+// }
+
+
+
+// .curtain__panel--left {
+//   /* Styles for sliding the left panel */
+// }
+
+// .curtain__panel--right {
+//   /* Styles for sliding the right panel */
+// }
+  
+// .curtain__prize {
+//   background: #333;
+//   position: absolute; /* Forces the prize position into the container start */
+//   z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+//   width: 100%;
+//   height: 50%;
+// }
+
+
+// input[type=checkbox] {
+//   position: absolute; /* Force the checkbox at the start of the container */
+//   cursor: pointer; /* Indicate the curtain is clickable */
+//   width: 100%; /* The checkbox is as wide as the component */
+//   height: 50%; /* The checkbox is as tall as the component */
+//   z-index: 100; /* Make sure the checkbox is on top of everything else */
+//   opacity: 0; /* Hide the checkbox */
+// }
+
+// input[type=checkbox]_off {
+//   display: none;
+// }
+
+// /* When the checkbox is checked . . . */
+        
+// /* Slide the first panel in */
+// input[type=checkbox]:checked ~ div.curtain__panel--left {
+//   transform: translateX(0);
+// }
+        
+// /* Slide the second panel in */
+// input[type=checkbox]:checked ~ div.curtain__panel--right {
+//   transform: translateX(0);
+// }
+
+// /* Slide the panel to the left out of the container */
+// .curtain__panel--left {
+//   transform: translateX(-100%);
+// }
+
+// /* Slide the panel to the right out of the container */
+// .curtain__panel--right {
+//   transform: translateX(100%);
+// }
+
+// .curtain__panel {
+//   background: #eee;
+//   width: 50%; /* Each panel takes up half the container */
+//   height: 50vh; /* Used for demo purposes */
+//   float: left; /* Makes sure panels are side-by-side */
+//   position: relative; /* Needed to define the z-index */
+//   z-index: 2; /* Places the panels in front of the prize */
+//   transition: all 1s ease-out; /* Animates the sliding transition */
+// }
+
+// .curtain__panel--hidden {
+//   background: #eee;
+//   width: 50%; /* Each panel takes up half the container */
+//   height: 50vh; /* Used for demo purposes */
+//   float: left; /* Makes sure panels are side-by-side */
+//   position: relative; /* Needed to define the z-index */
+//   z-index: 2; /* Places the panels in front of the prize */
+//   transition: all 1s ease-out; /* Animates the sliding transition */
+// }

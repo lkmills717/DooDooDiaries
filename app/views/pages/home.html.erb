@@ -1,10 +1,44 @@
 <div class="container landing-page">
   <div class="home-img text-center">
-    <img src="https://i.imgur.com/4HbsU6m.png" alt="poop_logo">
-
-    <div class="text-center mb-5">
-      <%= link_to "Sign in", new_user_session_path, class: "btn btn-flat join-in" %>
-      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-flat join-in" %>
-    </div>
+    <img class="logo" src="https://i.imgur.com/4HbsU6m.png" alt="poop_logo">
   </div>
+
+    <div class="invitation">
+      <p>Get started</p>
+    </div>
+
+    <div class="home-btns">
+      <%= link_to "Sign in", new_user_session_path, class: "btn-block btn" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn-block btn" %>
+    </div>
+
 </div>
+
+<%# <!-- The parent component -->
+<div class="curtain">
+	
+  <!-- The component wrapper -->
+  <div class="curtain__wrapper">
+    
+    <!-- The checkbox hack! -->
+    <input type="checkbox" checked>
+  
+    <!-- The left curtain panel -->
+    <div class="curtain__panel curtain__panel--left">
+      <p class="invitation text-right">Get</p>
+    </div> <!-- curtain__panel -->
+    
+    <!-- The prize behind the curtain panels -->
+    <div class="curtain__prize home-btns">
+  
+    </div> <!-- curtain__prize -->
+    
+    <!-- The right curtain panel -->
+    <div class="curtain__panel curtain__panel--right">
+      <p class="invitation text-left">started!</p>    
+    </div> <!-- curtain__panel -->
+    
+  </div> <!-- curtain__wrapper -->
+
+</div> <!-- curtain -->
+ %>
