@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'users#dashboard'
   get '/profile', to: 'users#profile'
+  get '/dashboard' => "welcome#index", :as => :user_root
 end
