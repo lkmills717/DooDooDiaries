@@ -1,5 +1,4 @@
 <div class='container'>
-<<<<<<< HEAD
 <h1>Welcome : <%= current_user.name%></h1>
   <%= cl_image_tag current_user.photo.key,class:"profile_image", width: 240, height: 400, crop: :fill if current_user.photo.attached? %>
   <div class="row">
@@ -21,50 +20,18 @@
   </div>
 </div>
 <div class="row">
-  <h1 class="text-center my-5 section-user"><%= current_user.name%></h1>
   <div>
-    <h2 class="text-center section-head">Last Movement</h2>
-    <% if @movement.nil? %>
-      <h3 class="my-5 section-content">No movement recorded - go out there and do some shit!</h3>
-    <%else%>
-      <div class="movement-report">
-        <h5 class="font-weight-bold">Everything happened at: <br> <%= "#{@movement.created_at}" %></h2>
-
-        <p class="my-4">It seems you were feeling <%= "#{@movement.feeling}" %> about it.</p>
-
-        <p class="my-4"> <%= "#{@movement.effort}" %>, and the time it took was around <%= "#{@movement.duration}" %>.</p>
-
-        <p class="my-4"> It's color was <%= "#{@movement.color}" %> and smelled like it was <%= "#{@movement.smell}" %>.</p>
-
-
-        <p class="my-4"> In the Bristol stool scale it was a <%= "#{@movement.shape}" %>.</p>
-
-        <div class="my-4">
-          <p class="font-weight-bold"><%= image_tag @movement.img_url, class: "dashboards_movement_img" %> HINT: . . .</p>
-        </div>
-
-        <p class="my-4">Your comments: <br> <%= "#{@movement.comments}" %></p>
-
-        <%= link_to "Return", movements_path, class: "btn-block btn" %>
-
-      </div>
-    <%end%>
-  </div>
-
->>>>>>> f9452777351aefb73d482c380571aa7f3f7716c2
-  <div>
-    <h2 class="text-center section-head">Last Meal</h2>
+    <h2>Last Meal</h2>
     <% if @meal.nil? %>
-      <h3 class="my-5 section-content">No meal recorded - how come you ain't hungry?</h3>
+      <h3 class="mt-5 mb-5">No meal recorded</h3>
       <%else%>
         <ul class="ul-style">
           <li>Description: <%=@meal.description%></li>
         </ul>
       <%end%>
   </div>
+</div>
 
-</div>
-</div>
 
 
 
