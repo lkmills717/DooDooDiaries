@@ -3,22 +3,30 @@
 <div class="row">
   <div class="col-sm-6">
   <h2>Last Movement</h2>
-    <ul class="ul-style">
-      <li>Feeling: <%=@movement.feeling%></li>
-      <li>Effort: <%=@movement.effort%></li>
-      <li>Duration: <%=@movement.duration%></li>
-      <li>Shape: <%=@movement.shape%></li>
-      <li>Color: <%=@movement.color%></li>
-      <li>Smell: <%=@movement.smell%></li>
-      <li>Comments: <%=@movement.comments%></li>
-    </ul>
+    <% if @movement.nil? %>
+      <h3 class="mt-5 mb-5">No movement recorded</h3>
+    <%else%>
+      <ul class="ul-style">
+        <li>Feeling: <%=@movement.feeling%></li>
+        <li>Effort: <%=@movement.effort%></li>
+        <li>Duration: <%=@movement.duration%></li>
+        <li>Shape: <%=@movement.shape%></li>
+        <li>Color: <%=@movement.color%></li>
+        <li>Smell: <%=@movement.smell%></li>
+        <li>Comments: <%=@movement.comments%></li>
+      </ul>
+    <%end%>
    </div>
 <div class="row">
   <div>
     <h2>Last Meal</h2>
-     <ul class="ul-style">
-      <li>Description: <%=@meal.description%></li>
-     </ul>
+    <% if @meal.nil? %>
+      <h3 class="mt-5 mb-5">No meal recorded</h3>
+      <%else%>
+        <ul class="ul-style">
+          <li>Description: <%=@meal.description%></li>
+        </ul>
+    <%end%>
   </div>
 </div>
 
