@@ -2,9 +2,14 @@
 //   text-align: center;
 // }
 
+.dashboard-hail {
+  margin-top: 30px;
+}
+
 .dashboard-actions {
   display: grid;
   grid-template: 1fr;
+  margin-top: 40px;
 }
 
 .dashboards_movement_img {
