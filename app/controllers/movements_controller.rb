@@ -2,7 +2,11 @@ class MovementsController < ApplicationController
     before_action :set_movement, only: [:show, :edit, :update, :destroy]
 
     def index
-        @movements = Movement.all
+        if params[:query].present?
+            @movements = Movement.search_by_feeling_effort_duration_color_smell_and_shape(params[:query])
+        else
+            @movements = current_user.movements
+        end
     end
 
     def show
