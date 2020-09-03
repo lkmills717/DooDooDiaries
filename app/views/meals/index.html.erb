@@ -1,19 +1,15 @@
 <div class="container">
-
-<form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-  <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
-  </div>
-</form>
   
   <div class="row opener text-center justify-content-center">
     <div class="col-8">
      <h1 class="index-quote">My food diary!🥕</h1>
     </div>
   </div>
+
+  <%= form_tag meals_path, method: :get do %>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "search", class: "btn btn-secondary" %>
+  <% end %>
 
   <div class="row justify-content-center align-items-center">
     <div class="cards mb-5 w-10">
