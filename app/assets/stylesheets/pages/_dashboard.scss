@@ -2,9 +2,14 @@
 //   text-align: center;
 // }
 
+.dashboard-hail {
+  margin-top: 30px;
+}
+
 .dashboard-actions {
   display: grid;
   grid-template: 1fr;
+  margin-top: 40px;
 }
 
 .dashboards_movement_img {
@@ -14,4 +19,48 @@
 .movement-report {
   margin-bottom: 100px;
   padding: 10px;
+}
+
+body {
+  background: #eee;
+}
+
+h1 {
+  font-family: 'Mali', cursive;
+}
+
+h2, h3, p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+.btn {
+  align-items: center;
+  background: #743ad5;
+  transition: 0.3s;
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  background: #d53a9d;
+  color: white;
+}
+
+.movements-form {
+  margin-bottom: 100px;
+}
+
+.movement-report {
+  background: white;
+  margin-top: 10px;
+  -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
+  -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
+  box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
 }

@@ -1,6 +1,5 @@
-<div class="dashboard-hail">
+<div class="dashboard-hail text-center">
   <h1 class="pb-3">Doo Doo Diaries</h1>
-  <h2 class="pb-3">Welcome *User name*!</h2>
   <p class="pb-3">How can I help you today?</p>
 </div>
 
@@ -10,7 +9,7 @@
 
     <%= link_to "Record Movement", new_movement_path, class: "btn-block btn my-3" %>
     <%= link_to "Record Meal", new_meal_path, class: "btn-block btn my-3" %>
-    <%= link_to "Check Events", "#", class: "btn-block btn my-3 mb-5" %>
+    <%= link_to "Check Events", movements_path, class: "btn-block btn my-3 mb-5" %>
 
   </div>
 
