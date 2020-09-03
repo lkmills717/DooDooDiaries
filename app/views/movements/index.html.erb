@@ -9,21 +9,24 @@
   </div>
 <% end %>
   
-  <div class="row opener text-center justify-content-center">
+  <div class="row text-center justify-content-center my-3">
     <div class="col-8">
-     <h1 class="index-quote">Shit happens.</h1>
-     <br>
-     <p>A collection of my best and worst poop memories📘</p>  
+     <h2 class="index-quote">Shit happens</h1>
+     <p>Keep it coming!</p>
     </div>
   </div>
 
-  <div class="row justify-content-center align-items-center">
-    <div class="cards mb-5 w-10">
-      <% @movements.each do |movement| %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.imgur.com/OELHk5p.jpg)">
-          <%= link_to "Poop##{movement.id}", "/movements/#{movement.id}", class: "text-center" %>
-        </div>
-      <% end %>
-    </div>
+  <div class="timeline mb-5">
+    <div class="timeline-header">Your timeline</div>
+    <% @movements.each do |movement| %>
+      <p>    
+        <%= "Doo Doo ##{movement.id}, #{movement.created_at}" %>
+        <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
+      </p>    
+    <% end %>
+    <div class="timeline-footer">See you next time!</div>
+    <br>
+    <br>
   </div>
+
 </div>
