@@ -3,7 +3,27 @@
   padding-left: 0px;
 }
 
-.profile_image{
-  height: 25%;
-  width: 25%;
+.section-user {
+  width: 75%;
+  margin: 0 auto;
+  opacity: 0.6;
+  text-shadow: 2px 2px 5px rgba(2,2,2,0.5);
 }
+
+.section-head {
+  background: white;
+  width: 50%;
+  margin: 0 auto;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.52);
+  border-radius: 5px;
+}
+
+.section-content {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 20px;
+  border-radius: 5px;
+}
+>>>>>>> f9452777351aefb73d482c380571aa7f3f7716c2

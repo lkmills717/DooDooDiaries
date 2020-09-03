@@ -1,9 +1,11 @@
 <div class="container">
 
-<%= form_tag movements_path, method: :get do %>
-  <%= text_field_tag :query, params[:query] %>
-  <%= submit_tag "search", class: "btn btn-secondary" %>
-<% end %>
+  <div class="text-center my-3">
+    <%= form_tag movements_path, method: :get do %>
+      <%= text_field_tag :query, params[:query] %>
+      <%= submit_tag "search", class: "btn btn-secondary" %>
+    <% end %>
+  </div>
   
   <div class="row text-center justify-content-center my-3">
     <div class="col-8">
