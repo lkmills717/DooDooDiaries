@@ -7,7 +7,4 @@ class Meal < ApplicationRecord
           tsearch: { prefix: true}
       }
 
-    def sortable_date
-      created_at.to_datetime
-    end
 end
