@@ -17,7 +17,7 @@
     <div class="timeline-header">Your timeline</div>
     <% @meals.reverse.each do |meal| %>
       <p>    
-        <%= "Food consumed at #{meal.created_at}" %>
+        <%= "Consumed at #{meal.created_at}" %>
         <%= link_to "Check it out", "/meals/#{meal.id}", class: "btn text-center" %>
       </p>    
     <% end %>
