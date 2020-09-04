@@ -16,7 +16,7 @@
 
   <div class="timeline mb-5">
     <div class="timeline-header">Your timeline</div>
-    <% @movements.each do |movement| %>
+    <% @movements.reverse.each do |movement| %>
       <p>    
         <%= "Doo Doo at #{movement.created_at}" %>
         <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
