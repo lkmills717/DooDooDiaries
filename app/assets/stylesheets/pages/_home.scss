@@ -2,164 +2,159 @@
 @media (max-width: 767px) {
 
     img {
+      width: 95%;
+  
+    }
+    // .home-img {
+    //   margin-top: 40px;
+    // }
+
+    .landing-page {
+      background: #fff;
+    }
+    
+    
+    .home-btns {
       width: 100%;
-  
-    }
-    .home-img {
-      margin-top: 40px;
+      // padding-top: 120px;
+      display: none;
     }
 
-}
-
-.home-btns {
-  width: 100%;
-  padding-top: 100px;
-  display: none;
-}
-
-.home-btns--on {
-  width: 100%;
-  height: 50vh;
-  padding-top: 100px;
-  background: black;
-  animation: wake-btns 1s;
-}
-
-@keyframes wake-btns {
-  0%   {opacity: 0;}
-  25%  {opacity: 0.2;}
-  50%  {opacity: 0.6;}
-  75%  {opacity: 0.8;}
-  100% {opacity: 1;}
-}
-
-.invitation {
-  background-color: #743ad5;
-  width: 100%;
-  border: none;
-  color:  #EEEEEE;
-  text-align: center;
-  font-size: 24px;
-  margin: 70px auto;
-  opacity: 0.6;
-  transition: 0.3s;
-  padding: 2px;
-}
-
-.invitation__off {
-  background-color: #743ad5;
-  width: 100%;
-  border: none;
-  color:  #EEEEEE;
-  padding: 16px 32px;
-  text-align: center;
-  font-size: 16px;
-  margin: 125px auto;
-  opacity: 0.6;
-  transition: 0.3s;
-  // padding: 2px;
-  display: none;
-}
-
-// Curtain
-
-.curtain {
-  width: 100%; /* Ensures the component is the full screen width */
-  height: 50vh; /* We're using this for demo purposes */
-  overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
-}
-  
-.curtain__wrapper {
-  width: 100%;
-  height: 50%;
-}
+    .diary_icon {
+      width: 70px;
+      margin: 0 auto;
+      display: block;
+      padding: 10px 0;
+    }
+    
+    .home-btns--on {
+      width: 100%;
+      height: 35vh;
+      padding-top: 0;
+      background: black;
+      opacity: 1;
+      animation: wake-btns 1s;
+    }
+    
+    @keyframes wake-btns {
+      0%   {opacity: 0;}
+      25%  {opacity: 0.2;}
+      50%  {opacity: 0.6;}
+      75%  {opacity: 0.8;}
+      100% {opacity: 1;}
+    }
+    
+    .invitation {
+      background-color: #743ad5;
+      width: 100%;
+      border: none;
+      color:  #EEEEEE;
+      text-align: center;
+      font-size: 24px;
+      margin: 70px auto;
+      opacity: 1;
+      transition: 0.3s;
+      padding: 2px;
+    }
+    
+    .invitation__off {
+      background-color: #743ad5;
+      width: 100%;
+      border: none;
+      color:  #EEEEEE;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 125px auto;
+      opacity: 1;
+      transition: 0.3s;
+      // padding: 2px;
+      display: none;
+    }
+    
+    // Curtain
+    
+    .curtain {
+      width: 100%; /* Ensures the component is the full screen width */
+      height: 35vh; /* We're using this for demo purposes */
+      overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
+    }
       
-.curtain__panel {
-  background:  #EEEEEE;
-  width: 50%; /* Each panel takes up half the container */
-  height: 50vh; /* Used for demo purposes */
-  float: left; /* Makes sure panels are side-by-side */
-  position: relative; /* Needed to define the z-index */
-  z-index: 2; /* Places the panels in front of the prize */
-}
+    .curtain__wrapper {
+      width: 100%;
+      height: 35%;
+    }
+          
+    .curtain__panel {
+      background:  #fff;
+      width: 50%; /* Each panel takes up half the container */
+      height: 35vh; /* Used for demo purposes */
+      float: left; /* Makes sure panels are side-by-side */
+      position: relative; /* Needed to define the z-index */
+      z-index: 2; /* Places the panels in front of the prize */
+    }
+    
+    .curtain__panel--left {
+      /* Styles for sliding the left panel */
+    }
+    
+    .curtain__panel--right {
+      /* Styles for sliding the right panel */
+    }
+      
+    .curtain__prize {
+      background:  #fff;
+      position: absolute; /* Forces the prize position into the container start */
+      z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+      width: 100%;
+      height: 35%;
+      opacity: 0.7;
+    }
+    
+    input[type=checkbox] {
+      position: absolute; /* Force the checkbox at the start of the container */
+      cursor: pointer; /* Indicate the curtain is clickable */
+      width: 100%; /* The checkbox is as wide as the component */
+      height: 35%; /* The checkbox is as tall as the component */
+      z-index: 100; /* Make sure the checkbox is on top of everything else */
+      opacity: 0; /* Hide the checkbox */
+    }
+    
+    .checkbox__off {
+      display: none;
+    }
+    
+    /* When the checkbox is checked... */
+    
+    /* Slide the first panel in */
+    input[type=checkbox]:checked ~ div.curtain__panel--left {
+      transform: translateX(0);
+    }
+            
+    /* Slide the second panel in */
+    input[type=checkbox]:checked ~ div.curtain__panel--right {
+      transform: translateX(0);
+    }
+    
+    /* Slide the panel to the left out of the container */
+    .curtain__panel--left {
+      transform: translateX(-100%);
+    }
+    
+    /* Slide the panel to the right out of the container */
+    .curtain__panel--right {
+      transform: translateX(100%);
+    }
+    
+    .curtain__panel {
+      background:  #fff;
+      width: 50%; /* Each panel takes up half the container */
+      height: 35vh; /* Used for demo purposes */
+      float: left; /* Makes sure panels are side-by-side */
+      position: relative; /* Needed to define the z-index */
+      z-index: 2; /* Places the panels in front of the prize */
+      transition: all 1s ease-out; /* Animates the sliding transition */
+    }
 
-// .curtain__panel--on {
-//   background: #eee;
-//   width: 50%; /* Each panel takes up half the container */
-//   height: 50vh; /* Used for demo purposes */
-//   float: left; /* Makes sure panels are side-by-side */
-//   position: relative; /* Needed to define the z-index */
-//   z-index: 2; /* Places the panels in front of the prize */
-//   animation: wake-prize 3s;
-// }
-
-// @keyframes wake-prize {
-//   0%   {left: 0px; background: #333; opacity: 0;}
-//   25%  {left: 100px; background: #333; opacity: 0;}
-//   50%  {left: 100px; background: #333; opacity: 0.2;}
-//   75%  {left: 0px; background: #333; opacity: 0.4;}
-//   100% {left: 0px; background: #333; opacity: 0.8;}
-// }
-
-.curtain__panel--left {
-  /* Styles for sliding the left panel */
-}
-
-.curtain__panel--right {
-  /* Styles for sliding the right panel */
-}
-  
-.curtain__prize {
-  background:  #EEEEEE;
-  position: absolute; /* Forces the prize position into the container start */
-  z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
-  width: 100%;
-  height: 50%;
-  opacity: 0.7;
-}
-
-input[type=checkbox] {
-  position: absolute; /* Force the checkbox at the start of the container */
-  cursor: pointer; /* Indicate the curtain is clickable */
-  width: 100%; /* The checkbox is as wide as the component */
-  height: 50%; /* The checkbox is as tall as the component */
-  z-index: 100; /* Make sure the checkbox is on top of everything else */
-  opacity: 0; /* Hide the checkbox */
-}
-
-.checkbox__off {
-  display: none;
-}
-
-/* When the checkbox is checked... */
-
-/* Slide the first panel in */
-input[type=checkbox]:checked ~ div.curtain__panel--left {
-  transform: translateX(0);
-}
-        
-/* Slide the second panel in */
-input[type=checkbox]:checked ~ div.curtain__panel--right {
-  transform: translateX(0);
-}
-
-/* Slide the panel to the left out of the container */
-.curtain__panel--left {
-  transform: translateX(-100%);
-}
-
-/* Slide the panel to the right out of the container */
-.curtain__panel--right {
-  transform: translateX(100%);
-}
-
-.curtain__panel {
-  background:  #EEEEEE;
-  width: 50%; /* Each panel takes up half the container */
-  height: 50vh; /* Used for demo purposes */
-  float: left; /* Makes sure panels are side-by-side */
-  position: relative; /* Needed to define the z-index */
-  z-index: 2; /* Places the panels in front of the prize */
-  transition: all 1s ease-out; /* Animates the sliding transition */
-}
+}    
 
