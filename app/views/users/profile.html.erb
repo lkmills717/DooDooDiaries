@@ -1,4 +1,5 @@
 <div class='container'>
+  <%= cl_image_tag current_user.photo.key,class:"profile_image", width: 240, height: 400, crop: :fill if current_user.photo.attached? %>
   <h1 class="text-center my-5 section-user"><%= current_user.name%></h1>
   <div>
     <h2 class="text-center section-head">Last Movement</h2>
@@ -10,21 +11,21 @@
 
         <p class="my-4">It seems you were feeling <%= "#{@movement.feeling}" %> about it.</p>
 
-        <p class="my-4"> <%= "#{@movement.effort}" %>, and the time it took was around <%= "#{@movement.duration}" %>.</p> 
+        <p class="my-4"> <%= "#{@movement.effort}" %>, and the time it took was around <%= "#{@movement.duration}" %>.</p>
 
-        <p class="my-4"> It's color was <%= "#{@movement.color}" %> and smelled like it was <%= "#{@movement.smell}" %>.</p> 
-      
+        <p class="my-4"> It's color was <%= "#{@movement.color}" %> and smelled like it was <%= "#{@movement.smell}" %>.</p>
+
 
         <p class="my-4"> In the Bristol stool scale it was a <%= "#{@movement.shape}" %>.</p>
 
         <div class="my-4">
-          <p class="font-weight-bold"><%= image_tag @movement.img_url, class: "dashboards_movement_img" %> HINT: . . .</p>        
+          <p class="font-weight-bold"><%= image_tag @movement.img_url, class: "dashboards_movement_img" %> HINT: . . .</p>
         </div>
 
         <p class="my-4">Your comments: <br> <%= "#{@movement.comments}" %></p>
 
         <%= link_to "Return", movements_path, class: "btn-block btn" %>
-      
+
       </div>
     <%end%>
   </div>
@@ -43,10 +44,10 @@
   <div class="timeline mb-5">
   <div class="timeline-header">Your timeline</div>
   <% @movements.each do |movement| %>
-    <p>    
+    <p>
       <%= "Doo Doo at #{movement.created_at}" %>
       <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
-    </p>    
+    </p>
   <% end %>
   <div class="timeline-footer">See you next time!</div>
   <br>

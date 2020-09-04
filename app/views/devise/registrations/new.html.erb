@@ -5,6 +5,8 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
+    <%= f.input :photo,
+                as: :file %>
     <%= f.input :name,
                     required: true,
                     autofocus: true,
@@ -24,7 +26,7 @@
 
     <div class="form-actions">
       <%= f.button :submit, "Sign up", class: "btn-block btn mb-4" %>
-      <%= render "devise/shared/links" %>      
+      <%= render "devise/shared/links" %>
     </div>
   <% end %>
 </div>
