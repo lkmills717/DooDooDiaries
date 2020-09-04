@@ -7,6 +7,10 @@ class Movement < ApplicationRecord
           tsearch: { prefix: true}
       }
 
+    def sortable_date
+        created_at.to_datetime
+    end  
+
     def img_url
         case self.shape.to_i
         when 1 
