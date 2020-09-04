@@ -47,6 +47,7 @@
     <p>
       <%= "Doo Doo at #{movement.created_at}" %>
       <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
+  <% end %>
 
   <% @timeline.reverse.each do |timeline| %>
     <% if timeline.in?(@meals) %>
@@ -68,6 +69,6 @@
 </div>
 
 
-</div>
+
 
 
