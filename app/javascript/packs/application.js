@@ -29,10 +29,16 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { test } from '../components/test'
 import { curtain } from '../components/curtain'
+import { movement } from '../components/movement'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  test();
-  curtain();
+  if(window.location.pathname=='/movements/new'){
+    movement();
+  }
+
+  if(window.location.pathname=='/'){
+    curtain();
+  }
 });

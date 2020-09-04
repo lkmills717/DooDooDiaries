@@ -1,4 +1,6 @@
 
+<img class="diary_icon center" src="https://i.imgur.com/wkMUOyw.png" alt="diary_img">
+
 <div class="container my-3 movements-form">
   <%= simple_form_for @movement do |f| %>
     <%= f.input :feeling, label: "How are you feeling?", collection: ['😁', '😀', '😐', '😔', '😰'] %>
@@ -6,57 +8,55 @@
     <%= f.input :duration, label: "How long have you been trying?", collection: ["1 minute", "1 -5 minutes", "5 - 10 minutes", "10 - 15 minutes", "more than 15 minutes"] %>
     <%= f.input :color, label: "What color is it?", collection: ["any shade of brown", "a little green", "super green", "red", "yellow", "pale, white, clay-colored", "black"] %>
     <%= f.input :smell, label: "How does it smell?", collection: ["a normal odor 🌹", "worse than normal ☠"] %>
-    <%= f.input :shape, label: "Please select the picture that best describes the shape:", collection: [1, 2, 3, 4, 5, 6, 7] %>
+    <%= f.input :shape, class: "shape_field", label: "Please select the picture that best describes the shape:" %>
+
+    <div class="dropdown my-4"> 
+      <button class="btn dropdown-toggle"
+              type="button" 
+              id="dropdownMenuButton" 
+              data-toggle="dropdown"
+              aria-haspopup="true" 
+              aria-expanded="false"> 
+          Select shape
+      </button> 
+
+      <ul class="dropdown-menu dropdown-menu-right " 
+          aria-labelledby="dropdownMenuButton"> 
+        <li class="dropdown-item"> 
+          <img class="btn-shape" src="https://i.imgur.com/kliYgem.png" width="75" height="40" data-id="1">
+        </li>
+        <li class="dropdown-item btn-shape"> 
+          <img class="btn-shape" src="https://i.imgur.com/XDzw3uN.png" width="75" height="40" data-id="2">
+        </li> 
+        <li class="dropdown-item btn-shape"> 
+          <img class="btn-shape" src="https://i.imgur.com/uQRhzrV.png" width="75" height="40" data-id="3">
+        </li> 
+        <li class="dropdown-item btn-shape"> 
+          <img class="btn-shape" src="https://i.imgur.com/CPQNjaP.png" width="75" height="40" data-id="4">
+        </li> 
+        <li class="dropdown-item btn-shape"> 
+          <img class="btn-shape" src="https://i.imgur.com/9uVW0r5.png" width="75" height="40" data-id="5">
+        </li> 
+        <li class="dropdown-item btn-shape"> 
+          <img class="btn-shape" src="https://i.imgur.com/yiZLVyf.png" width="75" height="40" data-id="6">
+        </li> 
+        <li class="dropdown-item btn-shape"> 
+          <img class="btn-shape" src="https://i.imgur.com/mGfzmyJ.png"width="75" height="40" data-id="7">
+        </li> 
+      </ul>
+      <br>
+      <br>
+    </div>
+
     <%= f.input :comments, label: "Please add any additional comments: " %>
 
     <%= f.button :submit, "Submit", class: "btn-block btn text-center" %>
+    <br>
+    <br>
+    <br>
 
   <% end %>
-
-  <br>
-  <br>
-
 </div>
 
 
-<%# <div class="dropdown mb-4"> 
-  <button class="btn dropdown-toggle"
-          type="button" 
-          id="dropdownMenuButton" 
-          data-toggle="dropdown"
-          aria-haspopup="true" 
-          aria-expanded="false"> 
-      Select shape
-  </button> 
 
-  <ul class="dropdown-menu dropdown-menu-right" 
-      aria-labelledby="dropdownMenuButton"> 
-    <li class="dropdown-item"> 
-      <img src="https://i.imgur.com/kliYgem.png"
-      width="75" height="40" data-id="1">
-    </li>
-    <li class="dropdown-item"> 
-      <img src="https://i.imgur.com/XDzw3uN.png" 
-      width="75" height="40">
-    </li> 
-    <li class="dropdown-item"> 
-      <img src="https://i.imgur.com/uQRhzrV.png" 
-      width="75" height="40">
-    </li> 
-    <li class="dropdown-item"> 
-      <img src="https://i.imgur.com/CPQNjaP.png"
-      width="75" height="40">
-    </li> 
-    <li class="dropdown-item"> 
-      <img src="https://i.imgur.com/9uVW0r5.png"
-      width="75" height="40">
-    </li> 
-    <li class="dropdown-item"> 
-      <img src="https://i.imgur.com/yiZLVyf.png"
-      width="75" height="40">
-    </li> 
-    <li class="dropdown-item"> 
-      <img src="https://i.imgur.com/mGfzmyJ.png"
-      width="75" height="40">
-    </li> 
-  </ul>  %>
