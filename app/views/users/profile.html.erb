@@ -40,6 +40,19 @@
     <%end%>
   </div>
 
+  <div class="timeline mb-5">
+  <div class="timeline-header">Your timeline</div>
+  <% @movements.each do |movement| %>
+    <p>    
+      <%= "Doo Doo at #{movement.created_at}" %>
+      <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
+    </p>    
+  <% end %>
+  <div class="timeline-footer">See you next time!</div>
+  <br>
+  <br>
+</div>
+
 </div>
 
 
