@@ -12,7 +12,6 @@ const movement = () => {
       const img = field.src;
       console.log(img);
       document.querySelector('#shape_choice').className += '--on';
-      document.querySelector('#shape_choice').className += 'center';
       document.querySelector('#shape_choice').src = img;
     });
    });
