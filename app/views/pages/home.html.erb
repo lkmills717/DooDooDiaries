@@ -23,7 +23,8 @@
 
 
         <div class="home-btns">
-          <img class="diary_icon center" src="https://i.imgur.com/wkMUOyw.png" alt="diary_img">
+          <%# <img class="diary_icon center" src="https://i.imgur.com/wkMUOyw.png" alt="diary_img"> %>
+          <p class="home__instructions text-center">Log in or create a new account</p>
           <%= link_to "Sign in", new_user_session_path, class: "btn-block btn" %>
           <%= link_to "Sign up", new_user_registration_path, class: "btn-block btn" %>
         </div>
