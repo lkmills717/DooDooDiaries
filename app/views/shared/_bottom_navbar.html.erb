@@ -4,7 +4,7 @@
       <li class="<%= if yield(:menu) == 'teams' then ' active' end %>">
         <%= link_to dashboard_path do %>
           <figure>
-            <i class="fas fa-home"></i>
+            <i class="fas fa-home" style="color:#743ad5;"></i>
             <figcaption>Dashboard</figcaption>
           </figure>
         <% end %>
@@ -12,7 +12,7 @@
       <li class="<%= if yield(:menu) == 'about' then ' active' end %>">
         <%= link_to root_path do %>
           <figure>
-            <i class="far fa-building"></i>
+            <i class="far fa-building" style="color:#743ad5;"></i>
             <figcaption>About Us</figcaption>
           </figure>
         <% end %>
@@ -20,7 +20,7 @@
       <li class="<%= if yield(:menu) == 'profile' then ' active' end %>">
         <%= link_to profile_path do %>
           <figure>
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user" style="color:#743ad5;"></i>
             <figcaption>Profile</figcaption>
           </figure>
         <% end %>
