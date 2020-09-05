@@ -19,6 +19,7 @@
     <% @movements.reverse.each do |movement| %>
       <p>    
         <%= "Doo Doo at #{movement.created_at}" %>
+        <%= image_tag movement.img_url, class: "dashboards_movement_img" %>
         <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
       </p>    
     <% end %>
