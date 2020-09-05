@@ -1,29 +1,32 @@
 <div class='container'>
+
   <h1 class="text-center my-5 section-user"> Welcome <%= current_user.name%>!💩</h1>
   <h2 class="text-center my-5 section-user">You have pooped <%= current_user.movements.count %> times! 👍 </h2>
-  <div>
   
 
   <div class="timeline mb-5">
-  <div class="timeline-header">Your timeline</div>
-  <% @sorted.reverse.each do |sort| %>
-    <% if sort.in?(@meals) %>
-      <p>    
-        <%= "Food consumed at #{sort.created_at}" %>
-        <%= link_to "Check it out", "/meals/#{@meal.id}", class: "btn text-center" %>
-      </p>
-    <% else %>
-      <p>    
-      <%= "Doo doo done at #{sort.created_at}" %>
-      <%= link_to "Check it out", "/movements/#{@movement.id}", class: "btn text-center" %>
-    </p>
-  <% end %>
-  <% end %>
-  <div class="timeline-footer">See you next time!</div>
-  <br>
-  <br>
-</div>
-
+    <div class="timeline-header">
+      Your timeline
+    </div>
+      <% @sorted.reverse.each do |sort| %>
+        <% if sort.in?(@meals) %>
+          <p>    
+            <%= "Food consumed at #{sort.created_at}" %>
+            <%= link_to "Check it out", "/meals/#{@meal.id}", class: "btn text-center" %>
+          </p>
+        <% else %>
+          <p>    
+            <%= "Doo doo done at #{sort.created_at}" %>
+            <%= link_to "Check it out", "/movements/#{@movement.id}", class: "btn text-center" %>
+          </p>
+        <% end %>
+      <% end %>
+    <div class="timeline-footer">
+      See you next time!
+    </div>
+    <br>
+    <br>
+  </div>
 
 </div>
 
