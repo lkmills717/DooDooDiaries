@@ -10,7 +10,9 @@
     <%= f.input :smell, label: "How does it smell?", collection: ["a normal odor 🌹", "worse than normal ☠"] %>
     <%= f.input :shape, class: "shape_field", label: "Please select the picture that best describes the shape:" %>
 
-    <img id="shape_choice" class="center shape_choice" src="" alt="poop_shape" width="75" height="40">
+    <div class="text-center">
+      <img id="shape_choice" class="shape_choice" src="" alt="poop_shape" width="75" height="40">
+    </div>
 
     <div class="dropdown my-4"> 
       <button class="btn dropdown-toggle"
