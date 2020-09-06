@@ -1,11 +1,13 @@
 <div class="container">
   <h2 class="title mt-5 text-center">Doo Doo Diary  <%#= "#{@movement.counter}" %> </h2>
-  <div class="movement-report">
-      <h5 class="font-weight-bold">Doo Doo Diary log, stardate <%= "#{@meal.created_at} . . ." %></h2>
-  
-      <p class="my-4">It seems you consumed some <%= "#{@meal.description}" %></p>
-  
-      <%= link_to "Return", meals_path, class: "btn-block btn" %>
-  
+  <div class="instructions-wrap">
+    <div class="instructions">
+        <h5 class="font-weight-bold">Doo Doo Diary log, stardate <%= "#{@meal.created_at} . . ." %></h2>
+    
+        <p class="my-4">It seems you consumed some <%= "#{@meal.description}" %></p>
+    
+        <%= link_to "Return", meals_path, class: "btn-block btn" %>
+    
+    </div>
   </div>
 </div>

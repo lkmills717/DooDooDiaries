@@ -27,6 +27,21 @@
   margin-right: auto;
 }
 
+.instructions-wrap {
+  max-width: 75%px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.instructions {
+  background: white;
+  color: #222;
+  padding: 2rem;
+}
+
 body {
   background: #fff;
 }
