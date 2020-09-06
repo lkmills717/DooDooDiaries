@@ -29,7 +29,23 @@
 
 .navbar-toggler {
   border-color: #743ad5;
-} 
+}
+
+.avatar-wrap {
+  max-width: 28%;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.avatar-inside {
+  background: white;
+  color: #222;
+  padding: 2rem;
+}
 
 @media (max-width: 767px) {
   .navbar-lewagon .navbar-collapse {
