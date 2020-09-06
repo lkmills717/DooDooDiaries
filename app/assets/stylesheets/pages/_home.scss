@@ -166,14 +166,14 @@
     opacity: 1;
   }
   
-  input[type=checkbox] {
-    position: absolute; /* Force the checkbox at the start of the container */
-    cursor: pointer; /* Indicate the curtain is clickable */
-    width: 100%; /* The checkbox is as wide as the component */
-    height: 35%; /* The checkbox is as tall as the component */
-    z-index: 100; /* Make sure the checkbox is on top of everything else */
-    opacity: 0; /* Hide the checkbox */
-  }
+  // input[type=checkbox] {
+  //   position: absolute; /* Force the checkbox at the start of the container */
+  //   cursor: pointer; /* Indicate the curtain is clickable */
+  //   width: 100%; /* The checkbox is as wide as the component */
+  //   height: 35%; /* The checkbox is as tall as the component */
+  //   z-index: 100; /* Make sure the checkbox is on top of everything else */
+  //   opacity: 0; /* Hide the checkbox */
+  // }
   
   .checkbox__off {
     display: none;
@@ -182,22 +182,22 @@
   /* When the checkbox is checked... */
   
   /* Slide the first panel in */
-  input[type=checkbox]:checked ~ div.curtain__panel--left {
-    transform: translateX(0);
-  }
+  // input[type=checkbox]:checked ~ div.curtain__panel--left {
+  //   transform: translateX(0);
+  // }
           
-  /* Slide the second panel in */
-  input[type=checkbox]:checked ~ div.curtain__panel--right {
-    transform: translateX(0);
-  }
+  // /* Slide the second panel in */
+  // input[type=checkbox]:checked ~ div.curtain__panel--right {
+  //   transform: translateX(0);
+  // }
   
   /* Slide the panel to the left out of the container */
-  .curtain__panel--left {
+  .curtain__panel--left--on {
     transform: translateX(-100%);
   }
   
   /* Slide the panel to the right out of the container */
-  .curtain__panel--right {
+  .curtain__panel--right--on {
     transform: translateX(100%);
   }
   
@@ -366,14 +366,14 @@
  
   }
   
-  input[type=checkbox] {
-    position: absolute; /* Force the checkbox at the start of the container */
-    cursor: pointer; /* Indicate the curtain is clickable */
-    width: 100%; /* The checkbox is as wide as the component */
-    height: 35%; /* The checkbox is as tall as the component */
-    z-index: 100; /* Make sure the checkbox is on top of everything else */
-    opacity: 0; /* Hide the checkbox */
-  }
+  // input[type=checkbox] {
+  //   position: absolute; /* Force the checkbox at the start of the container */
+  //   cursor: pointer; /* Indicate the curtain is clickable */
+  //   width: 100%; /* The checkbox is as wide as the component */
+  //   height: 35%; /* The checkbox is as tall as the component */
+  //   z-index: 100; /* Make sure the checkbox is on top of everything else */
+  //   opacity: 0; /* Hide the checkbox */
+  // }
   
   .checkbox__off {
     display: none;
@@ -382,22 +382,22 @@
   /* When the checkbox is checked... */
   
   /* Slide the first panel in */
-  input[type=checkbox]:checked ~ div.curtain__panel--left {
-    transform: translateX(0);
-  }
+  // input[type=checkbox]:checked ~ div.curtain__panel--left {
+  //   transform: translateX(0);
+  // }
           
-  /* Slide the second panel in */
-  input[type=checkbox]:checked ~ div.curtain__panel--right {
-    transform: translateX(0);
-  }
+  // /* Slide the second panel in */
+  // input[type=checkbox]:checked ~ div.curtain__panel--right {
+  //   transform: translateX(0);
+  // }
   
   /* Slide the panel to the left out of the container */
-  .curtain__panel--left {
+  .curtain__panel--left--on {
     transform: translateX(-100%);
   }
   
   /* Slide the panel to the right out of the container */
-  .curtain__panel--right {
+  .curtain__panel--right--on {
     transform: translateX(100%);
   }
   
