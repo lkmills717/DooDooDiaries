@@ -16,6 +16,7 @@
 
   <div class="timeline mb-5">
     <div class="timeline-header">Your timeline</div>
+
     <% @movements.reverse.each do |movement| %>
       <p>     
         <%= "#{movement.created_at}" %>
