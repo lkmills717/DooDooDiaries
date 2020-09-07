@@ -1,7 +1,6 @@
 <div class='container'>
 
   <h1 class="title text-center my-5 section-user"> Welcome <%= current_user.name%>!</h1>
-  <h2 class="text-center my-5 section-user">You have pooped <%= current_user.movements.count %> times! </h2>
 
   <div class="profile__btns my-3">
     <!-- Button trigger modal -->
@@ -88,9 +87,9 @@
     <div class="timeline-header">
       Your timeline
     </div>
-      <% @sorted.reverse.each do |sort| %>
+      <% @sorted.reverse.each_with_index do |sort, index| %>
         <% if sort.in?(@meals) %>
-          <p>    
+          <p class="<%= index.odd? ? 'odd' : 'even' %>" >    
             <%= "#{sort.created_at}" %>
             <br>
             <%= link_to "/meals/#{@meal.id}" do %>
@@ -98,7 +97,7 @@
             <% end %>   
           </p> 
         <% else %>
-          <p>    
+          <p class="<%= index.odd? ? 'odd' : 'even' %>" >    
             <%= "#{@movement.created_at}" %>
             <br>
             <%= link_to "/movements/#{@movement.id}" do %>

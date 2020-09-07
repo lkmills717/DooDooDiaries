@@ -16,8 +16,8 @@
 
   <div class="timeline mb-5">
     <div class="timeline-header">Your timeline</div>
-    <% @movements.reverse.each do |movement| %>
-      <p>    
+    <% @movements.reverse.each_with_index do |movement, index| %>
+      <p class="<%= index.odd? ? 'odd' : 'even'%>" >     
         <%= "#{movement.created_at}" %>
         <br>
         <%= link_to "/movements/#{movement.id}" do %>

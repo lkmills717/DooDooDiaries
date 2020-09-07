@@ -15,8 +15,8 @@
 
   <div class="timeline mb-5">
     <div class="timeline-header">Your timeline</div>
-    <% @meals.reverse.each do |meal| %>
-      <p>    
+    <% @meals.reverse.each_with_index do |meal, index| %>
+      <p class="<%= index.odd? ? 'odd' : 'even' %>" >    
         <%= "#{meal.created_at}" %>
         <br>
         <%= link_to "/meals/#{meal.id}" do %>
