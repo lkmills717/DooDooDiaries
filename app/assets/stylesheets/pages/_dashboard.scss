@@ -21,12 +21,33 @@
   padding: 10px;
 }
 
+#hint_icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instructions-wrap {
+  max-width: 100%;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.instructions {
+  background: white;
+  color: #222;
+  padding: 2rem;
+}
+
 body {
-  background: #eee;
+  background: #fff;
 }
 
 h1 {
-  font-family: 'Mali', cursive;
+  font-family: 'Righteous', cursive;
 }
 
 h2, h3, p {
@@ -42,7 +63,9 @@ ul {
 
 .btn {
   align-items: center;
+  border-radius: 5px;
   background: #743ad5;
+  opacity: 0.8;
   transition: 0.3s;
   border: none;
   color: white;
@@ -63,4 +86,12 @@ ul {
   -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
   -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
   box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.39);
+}
+
+@media (min-width: 640px) {
+
+  .dashboard-hail {
+    padding: 0;
+  }
+
 }

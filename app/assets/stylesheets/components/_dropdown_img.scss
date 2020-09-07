@@ -10,8 +10,12 @@
 .dropdown { 
   position: relative; 
   text-align: center;
-  // padding-bottom: 400px; 
-} 
+  
+}
+
+#dropdownMenuButton {
+  width: 160px;
+}
 
 .dropdown-content { 
   display: none; 

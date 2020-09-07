@@ -1,17 +1,35 @@
-<div class="dashboard-hail text-center">
-  <h1 class="pb-3">Doo Doo Diaries</h1>
-  <p class="pb-3">How can I help you today?</p>
-</div>
-
 <div class="container">
 
-  <div class="dashboard-actions">
+  <div class="dashboard-bg">
+    <div class="dashboard-hail text-center">
+      <h1 class="title">Doo Doo Diaries</h1>
+    </div>
 
-    <%= link_to "Record Movement", new_movement_path, class: "btn-block btn my-3" %>
-    <%= link_to "Record Meal", new_meal_path, class: "btn-block btn my-3" %>
-    <%= link_to "View Movements", movements_path, class: "btn-block btn my-3" %>
-    <%= link_to "View Meals", meals_path, class: "btn-block btn my-3 mb-5" %>
 
+    <div class="dashboard-actions">
+
+      <%= link_to "Record Movement", new_movement_path, class: "btn-block btn" %>
+      <%= link_to "Record Meal", new_meal_path, class: "btn-block btn" %>
+      <%= link_to "View Movements", movements_path, class: "btn-block btn" %>
+      <%= link_to "View Meals", meals_path, class: "btn-block btn mb-3" %>
+      <br>
+      <br>
+    </div>
   </div>
+
+
+
+  <div class="instructions-wrap">
+    <div class="instructions">
+      <img id="hint_icon" src="https://image.flaticon.com/icons/svg/2910/2910890.svg" alt="hint_icon" width="75" height="40" data-id="1">
+      <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eos distinctio illo, eligendi nostrum deleniti itaque sequi similique odit repellat quidem dignissimos?</p>
+    </div>
+  </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
+
 
 </div>

@@ -9,7 +9,7 @@
   
   <div class="row text-center justify-content-center my-3">
     <div class="col-8">
-     <h2 class="index-quote">Shit happens</h1>
+     <h2 class="title index-quote">Movements Follow-up</h1>
      <p>Keep it coming!</p>
     </div>
   </div>
@@ -19,6 +19,7 @@
     <% @movements.reverse.each do |movement| %>
       <p>    
         <%= "Doo Doo at #{movement.created_at}" %>
+        <%= image_tag movement.img_url, class: "dashboards_movement_img" %>
         <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
       </p>    
     <% end %>

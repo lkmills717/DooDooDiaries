@@ -1,7 +1,7 @@
-<div class="landing-page">
+<div class="landing__page">
   <div class="home-img text-center">
-    <h1 class="pt-4">Doo Doo Diaries</h1>
-    <img class="logo" src="https://i.imgur.com/4HbsU6m.png" alt="poop_logo">
+    <h1 class="title pt-4">Doo Doo Diaries</h1>
+    <img class="logo" src="https://i.imgur.com/CbBXPLI.png" alt="poop_logo">
   </div>
 
   <!-- The parent component -->
@@ -11,11 +11,11 @@
     <div class="curtain__wrapper">
       
       <!-- The checkbox hack! -->
-      <input class="checkbox" type="checkbox" checked>
+      <%# <input class="checkbox" type="checkbox" checked> %>
       
       <!-- The left curtain panel -->
       <div class="curtain__panel curtain__panel--left">
-        <p class="invitation text-right">This is a</p>
+        <p class="invitation text-right">Everybody</p>
       </div> <!-- curtain__panel -->
       
       <!-- The prize behind the curtain panels -->
@@ -23,7 +23,8 @@
 
 
         <div class="home-btns">
-          <img class="diary_icon center" src="https://i.imgur.com/wkMUOyw.png" alt="diary_img">
+          <%# <img class="diary_icon center" src="https://i.imgur.com/wkMUOyw.png" alt="diary_img"> %>
+          <p class="home__instructions text-center">Log in or create a new account</p>
           <%= link_to "Sign in", new_user_session_path, class: "btn-block btn" %>
           <%= link_to "Sign up", new_user_registration_path, class: "btn-block btn" %>
         </div>
@@ -32,7 +33,7 @@
       
       <!-- The right curtain panel -->
       <div class="curtain__panel curtain__panel--right">
-        <p class="invitation text-left">shit place!</p>  	    
+        <p class="invitation text-left">does it</p>  	    
       </div> <!-- curtain__panel -->
       
     </div> <!-- curtain__wrapper -->
