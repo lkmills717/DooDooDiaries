@@ -20,10 +20,13 @@ const movement = () => {
   submit.addEventListener('click', () => {
     // console.log("submit click");
     // console.log(document.querySelector('#shape_choice').src);
+    
+    // console.log(document.querySelector('#shape_choice').value);
     // event.preventDefault();
-    if (document.querySelector('#shape_choice').src === "http://localhost:3000/movements/new") {
+    if (document.querySelector('#shape_choice').value === undefined) {
+      
       console.log('shape field is empty');
-      document.querySelector('.shape__empty').className += '--on'
+      document.querySelector('.shape__empty').classList.add('shape__empty--on');
       event.preventDefault();
     }
   })
