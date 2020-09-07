@@ -89,9 +89,8 @@
     </div>
 
       <% @sorted.reverse.each do |sort| %>
-      <% @sorted.reverse.each_with_index do |sort, index| %>
         <% if sort.in?(@meals) %>
-          <p class="<%= index.odd? ? 'odd' : 'even' %>" >    
+          <p>    
             <%= "#{sort.created_at}" %>
             <br>
             <%= link_to "/meals/#{@meal.id}" do %>
@@ -99,7 +98,7 @@
             <% end %>   
           </p> 
         <% else %>
-          <p class="<%= index.odd? ? 'odd' : 'even' %>" >    
+          <p>    
             <%= "#{@movement.created_at}" %>
             <br>
             <%= link_to "/movements/#{@movement.id}" do %>
@@ -116,5 +115,3 @@
   </div>
 
 </div>
-
-
