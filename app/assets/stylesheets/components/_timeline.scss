@@ -29,11 +29,11 @@ $white: #ffffff;
   padding: 0 4em;
 }
 
-.timeline main {
-  min-width: 300px;
-  max-width: 500px;
-  margin: auto;
-}
+// .timeline main {
+//   min-width: 300px;
+//   max-width: 500px;
+//   margin: auto;
+// }
 
 .timeline p {
   font-size: 1em;
@@ -63,7 +63,7 @@ $white: #ffffff;
     border-radius: 50%;
     padding: 10px;
     height: 1.25em;
-    width: 1.25em;
+    // width: 1.25em;
     background-color: $black;
     text-align: center;
     line-height: 1.25em;
