@@ -11,7 +11,7 @@ class MovementsController < ApplicationController
 
     def show
       unless current_user == @movement.user
-        redirect_to root_path, notice: 'stop looking at other people stool'
+        redirect_to root_path, notice: "stop looking at other people's stool!"
       end
     end
 
