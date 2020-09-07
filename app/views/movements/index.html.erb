@@ -1,4 +1,4 @@
-<div class="">
+<div class="container">
 
   <div class="text-center my-3">
     <%= form_tag movements_path, method: :get do %>
@@ -20,9 +20,9 @@
       <p>    
         <%= "Doo Doo at #{movement.created_at}" %>
         <br>
-        <%= image_tag movement.img_url, class: "dashboards_movement_img my-1" %>
-        <br>
-        <%= link_to "Check it out", "/movements/#{movement.id}", class: "btn text-center" %>
+        <%= link_to "/movements/#{movement.id}" do %>
+            <%= image_tag movement.img_url, class: "dashboards_movement_img" %>
+        <% end %>   
       </p>    
     <% end %>
     <div class="timeline-footer">See you next time!</div>
