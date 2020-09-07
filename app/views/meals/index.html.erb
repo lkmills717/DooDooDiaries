@@ -1,5 +1,5 @@
 <div class="container">
-
+  <br>
   <div class="text-center my-3">
     <%= form_tag meals_path, method: :get do %>
       <%= text_field_tag :query, params[:query] %>
@@ -15,10 +15,13 @@
 
   <div class="timeline mb-5">
     <div class="timeline-header">Your timeline</div>
-    <% @meals.reverse.each do |meal| %>
-      <p>    
-        <%= "Consumed at #{meal.created_at}" %>
-        <%= link_to "Check it out", "/meals/#{meal.id}", class: "btn text-center" %>
+    <% @meals.reverse.each_with_index do |meal, index| %>
+      <p class="<%= index.odd? ? 'odd' : 'even' %>" >    
+        <%= "#{meal.created_at}" %>
+        <br>
+        <%= link_to "/meals/#{meal.id}" do %>
+            <%= image_tag 'https://i.imgur.com/27SpbKk.png', class: "dashboards_movement_img" %>
+        <% end %>   
       </p>    
     <% end %>
     <div class="timeline-footer">See you next time!</div>
