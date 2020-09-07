@@ -1,8 +1,9 @@
 
 <img class="diary_icon center" src="https://i.imgur.com/wkMUOyw.png" alt="diary_img">
 
-<div class="container my-3 movements-form">
-  <%= simple_form_for @movement do |f| %>
+<div id="form" class="container my-3 movements-form">
+  
+  <%= simple_form_for @movement do |f|  %>
     <%= f.input :feeling, label: "How are you feeling?", collection: ['😁', '😀', '😐', '😔', '😰'] %>
     <%= f.input :effort, label: "How hard are you trying?", collection: ["It was easy", "It was normal, a bit of effort ", "It was hard", "It was very hard"] %>
     <%= f.input :duration, label: "How long have you been trying?", collection: ["1 minute", "1 -5 minutes", "5 - 10 minutes", "10 - 15 minutes", "more than 15 minutes"] %>

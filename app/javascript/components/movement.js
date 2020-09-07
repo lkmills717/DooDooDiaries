@@ -13,7 +13,8 @@ const movement = () => {
       const img = field.src;
       console.log(img);
       document.querySelector('#shape_choice').className += '--on';
-      document.querySelector('#shape_choice').src = img;      
+      document.querySelector('#shape_choice').src = img;
+      document.querySelector('#shape_choice').value = 1;
     });
   });
 
@@ -28,6 +29,7 @@ const movement = () => {
       console.log('shape field is empty');
       document.querySelector('.shape__empty').classList.add('shape__empty--on');
       event.preventDefault();
+
     }
   })
 
