@@ -21,7 +21,7 @@
         <%= "#{movement.created_at}" %>
         <br>
         <%= link_to "/movements/#{movement.id}" do %>
-            <%= image_tag movement.img_url, class: "dashboards_movement_img" %>
+            <img image_tag @movement.img_url, class="dashboards_movement_img">
         <% end %>   
       </p>    
     <% end %>
