@@ -1,5 +1,5 @@
 <div class="container">
-
+  <br>
   <div class="text-center my-3">
     <%= form_tag movements_path, method: :get do %>
       <%= text_field_tag :query, params[:query] %>
@@ -18,7 +18,7 @@
     <div class="timeline-header">Your timeline</div>
     <% @movements.reverse.each do |movement| %>
       <p>    
-        <%= "Doo Doo at #{movement.created_at}" %>
+        <%= "#{movement.created_at}" %>
         <br>
         <%= link_to "/movements/#{movement.id}" do %>
             <%= image_tag movement.img_url, class: "dashboards_movement_img" %>
