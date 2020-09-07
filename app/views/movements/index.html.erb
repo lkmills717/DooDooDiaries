@@ -16,12 +16,12 @@
 
   <div class="timeline mb-5">
     <div class="timeline-header">Your timeline</div>
-    <% @movements.reverse.each_with_index do |movement, index| %>
-      <p class="<%= index.odd? ? 'odd' : 'even'%>" >     
+    <% @movements.reverse.each do |movement, index| %>
+      <p>    
         <%= "#{movement.created_at}" %>
         <br>
         <%= link_to "/movements/#{movement.id}" do %>
-            <img image_tag @movement.img_url, class="dashboards_movement_img">
+            <%= image_tag movement.img_url, class="dashboards_movement_img"%>
         <% end %>   
       </p>    
     <% end %>
