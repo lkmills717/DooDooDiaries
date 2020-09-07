@@ -39,12 +39,12 @@ $white: #ffffff;
   opacity: 0.7;
 }
 //odd number borders
-.timeline p:nth-of-type(odd) {
+.timeline p:nth-of-type(2n+1) {
   border-right: 3px solid;
   padding-left: 0;
 }
 //even number borders
-.timeline p:nth-of-type(even) {
+.timeline p:nth-of-type(2n) {
   border-left: 3px solid;
   padding-right: 0;
 }
