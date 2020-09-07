@@ -10,6 +10,9 @@ class MovementsController < ApplicationController
     end
 
     def show
+      unless current_user == @movement.user
+        redirect_to root_path, notice: "stop looking at other people's stool!"
+      end
     end
 
     def new

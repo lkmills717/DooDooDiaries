@@ -87,6 +87,8 @@
     <div class="timeline-header">
       Your timeline
     </div>
+
+      <% @sorted.reverse.each do |sort| %>
       <% @sorted.reverse.each_with_index do |sort, index| %>
         <% if sort.in?(@meals) %>
           <p class="<%= index.odd? ? 'odd' : 'even' %>" >    
