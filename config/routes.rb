@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   resources :movements
   resources :meals
 
+  namespace :charts do
+    get 'new-users'
+  end
+
+
   get '/dashboard', to: 'users#dashboard'
   get '/profile', to: 'users#profile'
   get '/dashboard' => "welcome#index", :as => :user_root
