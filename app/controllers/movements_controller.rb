@@ -48,6 +48,10 @@ class MovementsController < ApplicationController
         redirect_to new_movement_path
     end
 
+    def charts
+      @movements = current_user.movements
+    end
+
     private
     def movement_params
         params.require(:movement).permit(:id, :feeling, :effort, :duration, :shape, :color, :smell, :comments)
