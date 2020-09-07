@@ -44,5 +44,3 @@ document.addEventListener('turbolinks:load', () => {
     curtain();
   }
 });
-
-//= require jquery-ui
