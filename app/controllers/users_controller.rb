@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     @movements = current_user.movements
     @meals = current_user.meals
     @timeline = @movements + @meals
-    @timeline.sort_by &:sortable_date
+    @sorted = @timeline.sort_by &:created_at
   end
+
 end
