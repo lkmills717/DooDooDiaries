@@ -58,8 +58,8 @@
                   <%= pie_chart @movements.group(:duration).count, label: "Duration", colors: [ '#0074D9', '#39CCCC', '#3D9970', '#FFDC00', '#85144b' ] %>
                   <p class="title text-center mt-3">Overall colors</p>
                   <%= pie_chart @movements.group(:color).count, label: "Color", colors: [ '#39CCCC', '#7a5901', '#111111', '#DDDDDD', '#FF4136', '#2ECC40', '#FFDC00'] %>
-                  <p class="title text-center mt-3">Overall shapes</p>
-                  <%#= pie_chart({"Type 1" => @movements.where(shape: 1).count, "Type 2" => @movements.where(shape: 2).count, "Type 3" => @movements.where(shape: 3).count,"Type 4" => @movements.where(shape: 4).count,"Type 5" => @movements.where(shape: 5).count,"Type 6" => @movements.where(shape: 6).count,"Type 7" => @movements.where(shape: 7).count}) %>
+                  <%# <p class="title text-center mt-3">Overall shapes</p> %>
+                  <%= pie_chart({"Type 1" => @movements.where(shape: 1).count, "Type 2" => @movements.where(shape: 2).count, "Type 3" => @movements.where(shape: 3).count,"Type 4" => @movements.where(shape: 4).count,"Type 5" => @movements.where(shape: 5).count,"Type 6" => @movements.where(shape: 6).count,"Type 7" => @movements.where(shape: 7).count}) %>
                 </div>
                 <br>
                 <br>

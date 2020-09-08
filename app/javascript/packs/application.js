@@ -47,4 +47,5 @@ document.addEventListener('turbolinks:load', () => {
   if(window.location.pathname=='/'){
     curtain();
   }
+  
 });
