@@ -16,10 +16,9 @@
 
   <div class="timeline mb-5">
     <div class="timeline-header">Your timeline</div>
-
     <% @movements.reverse.each do |movement| %>
       <p>     
-        <%= "#{movement.created_at}" %>
+        <%= "#{movement.created_at.strftime('%a %d %b %H:%M')}" %>
         <br>
         <%= link_to "/movements/#{movement.id}" do %>
             <%= image_tag movement.img_url, class: "dashboards_movement_img" %>
