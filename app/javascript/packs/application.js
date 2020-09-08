@@ -36,12 +36,9 @@ import { test } from '../components/test'
 import { curtain } from '../components/curtain'
 import { movement } from '../components/movement'
 
-Chartkick.use(Chart)
-
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-
 
   if(window.location.pathname=='/movements/new'){
     movement();
@@ -50,4 +47,5 @@ document.addEventListener('turbolinks:load', () => {
   if(window.location.pathname=='/'){
     curtain();
   }
+  
 });

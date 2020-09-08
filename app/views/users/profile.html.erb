@@ -38,13 +38,32 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="graphs--label">Activity graphs</h5>
+            <h5 class="title modal-title" id="graphs--label">Activity Graphs</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            Show some graphs of movements and meals?
+            <div class="container">
+              <%#= line_chart @movements.group(:feeling).group_by_month(:created_at).count %>
+
+              <div class="charts">
+                  <p class="title text-center">Overall feelings</p>
+                  <%= pie_chart @movements.group(:feeling).count, label: "Feeling", colors: [ '#0074D9', '#39CCCC', '#3D9970', '#FFDC00', '#85144b' ] %>
+                  <p class="title text-center mt-3">Overall efforts</p>
+                  <%= pie_chart @movements.group(:effort).count, label: "Effort", colors: [ '#0074D9', '#39CCCC', '#FFDC00', '#85144b' ] %>
+                  <p class="title text-center mt-3">Overall smell</p>
+                  <%= pie_chart @movements.group(:smell).count, label: "Smell", colors: [ '#7FDBFF', '#85144b' ] %>
+                  <p class="title text-center mt-3">Overall duration</p>
+                  <%= pie_chart @movements.group(:duration).count, label: "Duration", colors: [ '#0074D9', '#39CCCC', '#3D9970', '#FFDC00', '#85144b' ] %>
+                  <p class="title text-center mt-3">Overall colors</p>
+                  <%= pie_chart @movements.group(:color).count, label: "Color", colors: [ '#39CCCC', '#7a5901', '#111111', '#DDDDDD', '#FF4136', '#2ECC40', '#FFDC00'] %>
+                  <%# <p class="title text-center mt-3">Overall shapes</p> %>
+                  <%= pie_chart({"Type 1" => @movements.where(shape: 1).count, "Type 2" => @movements.where(shape: 2).count, "Type 3" => @movements.where(shape: 3).count,"Type 4" => @movements.where(shape: 4).count,"Type 5" => @movements.where(shape: 5).count,"Type 6" => @movements.where(shape: 6).count,"Type 7" => @movements.where(shape: 7).count}) %>
+                </div>
+                <br>
+                <br>
+              </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn-block btn" btn" data-dismiss="modal">Close</button>

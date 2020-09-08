@@ -2,22 +2,33 @@
   <h2 class="title mt-5 text-center">Doo Doo Diary  <%#= "#{@movement.counter}" %> </h2>
   <div class="instructions-wrap">
     <div class="instructions">
-        <h5 class="font-weight-bold">Everything happened at: <br> <%= "#{@movement.created_at.strftime('%a %d %b %H:%M')}" %></h2>
+        <h5 class="font-weight-bold mb-3"><%= "#{@movement.created_at.strftime('%a %d %b %H:%M')}" %></h2>
     
-        <p class="my-4">It seems you were feeling <%= "#{@movement.feeling}" %> about it.</p>
-    
-        <p class="my-4"> <%= "#{@movement.effort}" %>, and the time it took was around <%= "#{@movement.duration}" %>.</p> 
-    
-        <p class="my-4"> The color was <%= "#{@movement.color}" %> and the smell was <%= "#{@movement.smell}" %>.</p> 
-    
-  
-        <p class="my-4"> According to the Bristol stool scale it was a <%= "#{@movement.shape}" %>.</p>
-
-        <div class="my-4">
-          <p class="font-weight-bold"><%= image_tag @movement.img_url, class: "dashboards_movement_img" %> HINT: . . .</p>        
+        <p class="my-2">It seems you were feeling <%= "#{@movement.feeling}" %> about it.</p>    
+        <p class="my-2"> <%= "#{@movement.effort}" %>, and the time it took was around <%= "#{@movement.duration}" %>.</p>    
+        <p class="my-2"> The color was <%= "#{@movement.color}" %> and the smell was <%= "#{@movement.smell}" %>.</p>  
+        <p class="my-2"> According to the Bristol stool scale it was a <%= "#{@movement.shape}" %> , as seen below:</p>
+        <div class="my-2">
+          <p class="font-weight-bold text-center"><%= image_tag @movement.img_url, class: "dashboards_movement_img" %></p>
         </div>
 
-        <p class="my-4">Your comments: <br> <%= "#{@movement.comments}" %></p>
+        <p class="title comment__field my-2">Comments: </p>
+        <br>
+        <p class="comment__text"> <%= "#{@movement.comments}" %></p>
+
+        <div class="">
+          <p>Geolocation block</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p>Geolocation block</p>
+        </div>
 
         <%= link_to "Return", movements_path, class: "btn-block btn" %>
     
