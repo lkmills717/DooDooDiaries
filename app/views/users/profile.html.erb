@@ -81,30 +81,38 @@
     </div>
   </div>
 
-  
+
 
   <div class="timeline mb-5">
+    <%= form_tag profile_path, method: :get do %>
+      <%= date_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Select a Date"
+      %>
+  <%= submit_tag "Filter", class: "btn btn-primary" %>
+    <% end %>
     <div class="timeline-header">
       Your timeline
     </div>
 
       <% @sorted.reverse.each do |sort| %>
         <% if sort.in?(@meals) %>
-          <p>    
+          <p>
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
             <%= link_to "/meals/#{@meal.id}" do %>
                 <%= image_tag 'https://i.imgur.com/27SpbKk.png', class: "dashboards_movement_img" %>
-            <% end %>   
-          </p> 
+            <% end %>
+          </p>
         <% else %>
-          <p>    
+          <p>
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
             <%= link_to "/movements/#{@movement.id}" do %>
                 <%= image_tag @movement.img_url, class: "dashboards_movement_img" %>
-            <% end %>   
-          </p> 
+            <% end %>
+          </p>
         <% end %>
       <% end %>
     <div class="timeline-footer">
