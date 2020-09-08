@@ -1,13 +1,15 @@
 <div class='container'>
 
   <h1 class="title text-center my-5 section-user"> Welcome <%= current_user.name%>!</h1>
+  <% if @user.photo.attached? %>
+      <%= cl_image_tag @user.photo.key, height: 40, width: 50, crop: :fill %>
+      <% end %>
 
   <div class="profile__btns my-3">
     <!-- Button trigger modal -->
     <button type="button" class="btn-block btn my-2" data-toggle="modal" data-target="#profile__image">
       Change profile image
     </button>
-
     <!-- Modal -->
     <div class="modal fade" id="profile__image" tabindex="-1" role="dialog" aria-labelledby="profile__image--label" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -19,12 +21,15 @@
             </button>
           </div>
           <div class="modal-body">
-            Here is the cloudinary option.
+            <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+            <%= f.input :photo, as: :file %>
+            <%= f.submit "Save changes" %>
+            <% end %>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn-block btn">Save changes</button>
-            <button type="button" class="btn-block btn" data-dismiss="modal">Close</button>
-          </div>
+          <!-- <div class="modal-footer">
+            <button type="submit" class="btn-block btn">Save changes</button>
+            <button type="submit" class="btn-block btn" data-dismiss="modal">Close</button>
+          </div> -->
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use postgresql ➜  DooDooDiaries git:(chartkick) ✗ git commit -m "changes"
 gem 'faker'
 
+gem 'cloudinary', '~> 1.16.0'
+
 
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
