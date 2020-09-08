@@ -85,12 +85,18 @@
 
   <div class="timeline mb-5">
     <%= form_tag profile_path, method: :get do %>
-      <%= date_field_tag :query,
-        params[:query],
+      <%= date_field_tag :start_date,
+        params[:start_date],
         class: "form-control",
         placeholder: "Select a Date"
       %>
-  <%= submit_tag "Filter", class: "btn btn-primary" %>
+      <%= date_field_tag :end_date,
+        params[:end_date],
+        class: "form-control",
+        placeholder: "Select a Date"
+      %>
+  <%= select_tag :type, options_for_select(["Meals", "Movements", "Meals & Movements"])%>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
     <div class="timeline-header">
       Your timeline
