@@ -1,3 +1,13 @@
 
 
-<%= line_chart @movements.group(:movement_id).group_by_week(:created_at).count %>
+<%#= line_chart @movements.group(:feeling).group_by_month(:created_at).count %>
+<h1>Amount of stools given from 2019</h1>
+
+<%= pie_chart @movements.group(:feeling).count, label: "Feeling" %>
+<%= pie_chart @movements.group(:effort).count, label: "Effort" %>
+<%= pie_chart @movements.order(:stool_type).group(:stool_type).count, label: "Shape" %>
+<%= pie_chart @movements.group(:smell).count, label: "Smell" %>
+<%= pie_chart @movements.group(:duration).count, label: "Duration" %>
+<%= pie_chart @movements.group(:color).count, label: "Color" %>
+
+
