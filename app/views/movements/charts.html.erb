@@ -5,7 +5,7 @@
 
 <%= pie_chart @movements.group(:feeling).count, label: "Feeling" %>
 <%= pie_chart @movements.group(:effort).count, label: "Effort" %>
-<%= pie_chart @movements.order(:stool_type).group(:stool_type).count, label: "Shape" %>
+<%= pie_chart({"Type 1" => @movements.where(shape: 1).count , "Type 2" => @movements.where(shape: 2).count,"Type 3" => @movements.where(shape: 3).count,"Type 4" => @movements.where(shape: 4).count,"Type 5" => @movements.where(shape: 5).count,"Type 6" => @movements.where(shape: 6).count,"Type 7" => @movements.where(shape: 7).count}) %>
 <%= pie_chart @movements.group(:smell).count, label: "Smell" %>
 <%= pie_chart @movements.group(:duration).count, label: "Duration" %>
 <%= pie_chart @movements.group(:color).count, label: "Color" %>

@@ -15,7 +15,6 @@ Meal.destroy_all
 
 puts "creating richard"
 user = User.create(name: "Richard", email: "rich@rich.com", password: "123456")
-SHAPES = ["https://i.imgur.com/kliYgem.png", "https://i.imgur.com/XDzw3uN.png ", "https://i.imgur.com/uQRhzrV.png", "https://i.imgur.com/CPQNjaP.png", "https://i.imgur.com/9uVW0r5.png", "https://i.imgur.com/yiZLVyf.png", "https://i.imgur.com/mGfzmyJ.png"]
 
 
 puts "creating movements"
@@ -25,12 +24,11 @@ puts "creating movements"
  feeling: ['😁', '😀', '😐', '😔', '😰'].sample,
  effort: ["It was easy", "It was normal, a bit of effort ", "It was hard", "It was very hard"].sample,
  duration: ["1 minute", "1 -5 minutes", "5 - 10 minutes", "10 - 15 minutes", "more than 15 minutes"].sample,
- shape: SHAPES.sample,
+ shape: rand(1..7),
  color: ["any shade of brown", "a little green", "super green", "red", "yellow", "pale, white, clay-colored", "black"].sample,
  smell: ["a normal odor 🌹", "worse than normal ☠"].sample
 )
   movement.user = user
-  movement.stool_type =  "Type #{SHAPES.index{ |item| item == movement.shape } + 1}"
 
   movement.created_at = rand(1.years).seconds.ago
   movement.save
