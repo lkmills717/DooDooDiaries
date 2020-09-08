@@ -1,2 +1,3 @@
-<%= bar_chart @movements
- %>
+
+
+<%= line_chart @movements.group(:movement_id).group_by_week(:created_at).count %>
