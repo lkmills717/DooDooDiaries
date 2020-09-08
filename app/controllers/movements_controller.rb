@@ -1,5 +1,7 @@
 class MovementsController < ApplicationController
     before_action :set_movement, only: [:show, :edit, :update, :destroy]
+    SHAPES = ["https://i.imgur.com/kliYgem.png", "https://i.imgur.com/XDzw3uN.png ", "https://i.imgur.com/uQRhzrV.png", "https://i.imgur.com/CPQNjaP.png", "https://i.imgur.com/9uVW0r5.png", "https://i.imgur.com/yiZLVyf.png", "https://i.imgur.com/mGfzmyJ.png"]
+
 
     def index
         if params[:query].present?
