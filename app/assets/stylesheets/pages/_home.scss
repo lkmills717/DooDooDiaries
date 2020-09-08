@@ -70,7 +70,7 @@
     padding-top: 0;
     background: white;
     opacity: 1;
-    animation: wake-btns 1s;
+    animation: wake-btns 2s;
     border-top: 3px solid;
     border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
     border-image-slice: 1;
@@ -79,9 +79,6 @@
   
   @keyframes wake-btns {
     0%   {opacity: 0;}
-    25%  {opacity: 0.2;}
-    50%  {opacity: 0.6;}
-    75%  {opacity: 0.8;}
     100% {opacity: 1;}
   }
   
