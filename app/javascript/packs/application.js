@@ -36,12 +36,13 @@ import { test } from '../components/test'
 import { curtain } from '../components/curtain'
 import { movement } from '../components/movement'
 
-Chartkick.use(Chart)
-
-document.addEventListener('turbolinks:load', () => {
+import { initMapbox } from '../plugins/init_mapbox';
   // Call your functions here, e.g:
   // initSelect2();
-
+  document.addEventListener('turbolinks:load', () => {
+    initMapbox();
+  
+  
 
   if(window.location.pathname=='/movements/new'){
     movement();
