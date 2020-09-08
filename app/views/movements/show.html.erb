@@ -5,7 +5,7 @@
         <h5 class="font-weight-bold mb-3"><%= "#{@movement.created_at.strftime('%a %d %b %H:%M')}" %></h2>
 
         <p class="title text-left">Feeling</p>
-        <p class="my-2 text-center"> <%= "#{@movement.feeling}" %></p>
+        <p class="my-2">You were feeling <%= "#{@movement.feeling}" %></p>
         <p class="title text-left">Effort & Duration</p>
         <p class="my-2"> <%= "#{@movement.effort}" %>, and the time it took was around <%= "#{@movement.duration}" %>.</p>
         <p class="title text-left">Color</p>
