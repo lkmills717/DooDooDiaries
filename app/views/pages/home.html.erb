@@ -15,25 +15,52 @@
       
       <!-- The left curtain panel -->
       <div class="curtain__panel curtain__panel--left">
-        <p class="invitation text-right">Start your</p>
+        <p class="invitation text-right">Click to</p>
       </div> <!-- curtain__panel -->
       
       <!-- The prize behind the curtain panels -->
       <div class="curtain__prize">
 
-
         <div class="home-btns">
-          <%# <img class="diary_icon center" src="https://i.imgur.com/wkMUOyw.png" alt="diary_img"> %>
-          <p class="home__instructions text-center">Log in or create a new account</p>
-          <%= link_to "Sign in", new_user_session_path, class: "btn-block btn" %>
-          <%= link_to "Sign up", new_user_registration_path, class: "btn-block btn" %>
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="banner">
+                  <img class="banner__img d-block w-100" src="https://i.imgur.com/2Qnol1I.jpg" alt="diary_1">
+                  <p class="title banner__text centered">Are your bowel movements regular?</p>
+                  <%= link_to "Sign up", new_user_registration_path, class: "bottom__right btn btn-flat" %>
+                  <%= link_to "Sign in", new_user_session_path, class: "bottom__left btn btn-flat" %>
+                </div>                
+              </div>
+              <div class="carousel-item">
+                <div class="banner">
+                  <img class="banner__img d-block w-100" src="https://i.imgur.com/1ffn0Lz.jpg" alt="diary_1">
+                  <p class="title banner__text centered">Eat something interesting? Log in!</p>
+                  <%= link_to "Sign up", new_user_registration_path, class: "bottom__right btn btn-flat" %>
+                  <%= link_to "Sign in", new_user_session_path, class: "bottom__left btn btn-flat" %>
+                </div>                
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
 
       </div> <!-- curtain__prize -->
       
       <!-- The right curtain panel -->
       <div class="curtain__panel curtain__panel--right">
-        <p class="invitation text-left">diary now!</p>  	    
+        <p class="invitation text-left">start!</p>  	    
       </div> <!-- curtain__panel -->
       
     </div> <!-- curtain__wrapper -->
