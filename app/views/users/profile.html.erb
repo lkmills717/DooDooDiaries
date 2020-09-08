@@ -81,30 +81,44 @@
     </div>
   </div>
 
-  
+
 
   <div class="timeline mb-5">
+    <%= form_tag profile_path, method: :get do %>
+      <%= date_field_tag :start_date,
+        params[:start_date],
+        class: "form-control",
+        placeholder: "Select a Date"
+      %>
+      <%= date_field_tag :end_date,
+        params[:end_date],
+        class: "form-control",
+        placeholder: "Select a Date"
+      %>
+  <%= select_tag :type, options_for_select(["Meals", "Movements", "Meals & Movements"])%>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
     <div class="timeline-header">
       Your timeline
     </div>
 
       <% @sorted.reverse.each do |sort| %>
         <% if sort.in?(@meals) %>
-          <p>    
+          <p>
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
             <%= link_to "/meals/#{@meal.id}" do %>
                 <%= image_tag 'https://i.imgur.com/27SpbKk.png', class: "dashboards_movement_img" %>
-            <% end %>   
-          </p> 
+            <% end %>
+          </p>
         <% else %>
-          <p>    
+          <p>
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
             <%= link_to "/movements/#{@movement.id}" do %>
                 <%= image_tag @movement.img_url, class: "dashboards_movement_img" %>
-            <% end %>   
-          </p> 
+            <% end %>
+          </p>
         <% end %>
       <% end %>
     <div class="timeline-footer">
