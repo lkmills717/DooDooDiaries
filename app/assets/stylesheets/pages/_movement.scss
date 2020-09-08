@@ -23,3 +23,17 @@
   color: #ff0033;
   display: block;
 }
+
+.comment__field {
+  border-top: 2.5px solid rgba($color: #000000, $alpha: 0.7);
+  padding-top: 20px;
+}
+
+.comment__text {
+  border-bottom: 2.5px solid rgba($color: #000000, $alpha: 0.7);
+  padding-bottom: 20px;
+}
+
+.movement__hint {
+  font-size: 14px;
+}

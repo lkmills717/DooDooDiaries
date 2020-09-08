@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_09_08_115128) do
 
   # These are extensions that must be enabled in order to support this database
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_08_115128) do
     t.text "description"
     t.string "name"
   end
+
 
   create_table "meals", force: :cascade do |t|
     t.text "description"
