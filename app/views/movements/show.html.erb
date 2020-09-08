@@ -10,6 +10,7 @@
         <p class="my-2"> According to the Bristol stool scale it was a <%= "#{@movement.shape}" %> , as seen below:</p>
         <div class="my-2">
           <p class="font-weight-bold text-center"><%= image_tag @movement.img_url, class: "dashboards_movement_img" %></p>
+          <p><%= "#{@movement.hints}" %></p>
         </div>
 
         <p class="title comment__field my-2">Comments: </p>
