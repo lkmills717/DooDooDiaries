@@ -48,21 +48,19 @@
               <%#= line_chart @movements.group(:feeling).group_by_month(:created_at).count %>
 
               <div class="charts">
-                  <p class="title text-center">About your feelings</p>
+                  <p class="title text-center">Overall feelings</p>
                   <%= pie_chart @movements.group(:feeling).count, label: "Feeling", class: "" %>
-                  <p class="title text-center mt-3">About your efforts</p>
+                  <p class="title text-center mt-3">Overall efforts</p>
                   <%= pie_chart @movements.group(:effort).count, label: "Effort", class: "" %>
-                  <p class="title text-center mt-3">About the smeel</p>
+                  <p class="title text-center mt-3">Overall smell</p>
                   <%= pie_chart @movements.group(:smell).count, label: "Smell", class: "" %>
-                  <p class="title text-center mt-3">About the duration</p>
+                  <p class="title text-center mt-3">Overall duration</p>
                   <%= pie_chart @movements.group(:duration).count, label: "Duration", class: "" %>
                   <p class="title text-center mt-3">Overall colors</p>
                   <%= pie_chart @movements.group(:color).count, label: "Color", class: "" %>
                   <p class="title text-center mt-3">Overall shapes</p>
                   <%= pie_chart({"Type 1" => @movements.where(shape: 1).count, "Type 2" => @movements.where(shape: 2).count, "Type 3" => @movements.where(shape: 3).count,"Type 4" => @movements.where(shape: 4).count,"Type 5" => @movements.where(shape: 5).count,"Type 6" => @movements.where(shape: 6).count,"Type 7" => @movements.where(shape: 7).count}) %>
                 </div>
-                <br>
-                <br>
                 <br>
                 <br>
               </div>
