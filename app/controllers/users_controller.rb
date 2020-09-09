@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def profile
+    @user = current_user
     @movement = current_user.movements.last
     @meal = current_user.meals.last
     @movements = current_user.movements
@@ -22,6 +23,21 @@ class UsersController < ApplicationController
       @timeline = @movements + @meals
       @sorted = @timeline.sort_by &:created_at
     end
+  end
+
+  def update
+    @user = current_user
+    if @user.update(user_params)
+      redirect_to profile_path
+    else
+      render "users/profile"
+    end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:photo)
   end
 
 end

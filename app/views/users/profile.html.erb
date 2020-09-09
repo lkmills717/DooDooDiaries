@@ -1,13 +1,15 @@
 <div class='container'>
 
   <h1 class="title text-center my-5 section-user"> Welcome <%= current_user.name%>!</h1>
+  <% if @user.photo.attached? %>
+      <%= cl_image_tag @user.photo.key, height: 40, width: 50, crop: :fill %>
+      <% end %>
 
   <div class="profile__btns my-3">
     <!-- Button trigger modal -->
     <button type="button" class="btn-block btn my-2" data-toggle="modal" data-target="#profile__image">
       Change profile image
     </button>
-
     <!-- Modal -->
     <div class="modal fade" id="profile__image" tabindex="-1" role="dialog" aria-labelledby="profile__image--label" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -19,12 +21,15 @@
             </button>
           </div>
           <div class="modal-body">
-            Here is the cloudinary option.
+            <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+            <%= f.input :photo, as: :file %>
+            <%= f.submit "Save changes" %>
+            <% end %>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn-block btn">Save changes</button>
-            <button type="button" class="btn-block btn" data-dismiss="modal">Close</button>
-          </div>
+          <!-- <div class="modal-footer">
+            <button type="submit" class="btn-block btn">Save changes</button>
+            <button type="submit" class="btn-block btn" data-dismiss="modal">Close</button>
+          </div> -->
         </div>
       </div>
     </div>
@@ -47,20 +52,23 @@
             <div class="container">
               <%#= line_chart @movements.group(:feeling).group_by_month(:created_at).count %>
 
-              <div class="charts">
-                  <p class="title text-center">Overall feelings</p>
-                  <%= pie_chart @movements.group(:feeling).count, label: "Feeling" %>
-                  <p class="title text-center mt-3">Overall efforts</p>
-                  <%= pie_chart @movements.group(:effort).count, label: "Effort" %>
-                  <p class="title text-center mt-3">Overall smell</p>
-                  <%= pie_chart @movements.group(:smell).count, label: "Smell" %>
-                  <p class="title text-center mt-3">Overall duration</p>
-                  <%= pie_chart @movements.group(:duration).count, label: "Duration" %>
-                  <%# <p class="title text-center mt-3">Overall colors</p> %>
-                  <%#= pie_chart @movements.group(:color).count, label: "Color" %>
-                  <p class="title text-center mt-3">Overall shapes</p>
-                  <%= pie_chart({"Type 1" => @movements.where(shape: 1).count, "Type 2" => @movements.where(shape: 2).count, "Type 3" => @movements.where(shape: 3).count,"Type 4" => @movements.where(shape: 4).count,"Type 5" => @movements.where(shape: 5).count,"Type 6" => @movements.where(shape: 6).count,"Type 7" => @movements.where(shape: 7).count }) %>
+              <% unless @movements == [] %>
+                <div class="charts">
+                    <p class="title text-center">Overall feelings</p>
+                    <%= pie_chart @movements.group(:feeling).count, label: "Feeling", colors: [ '#0074D9', '#39CCCC', '#3D9970', '#FFDC00', '#85144b' ] %>
+                    <p class="title text-center mt-3">Overall efforts</p>
+                    <%= pie_chart @movements.group(:effort).count, label: "Effort", colors: [ '#0074D9', '#39CCCC', '#FFDC00', '#85144b' ] %>
+                    <p class="title text-center mt-3">Overall smell</p>
+                    <%= pie_chart @movements.group(:smell).count, label: "Smell", colors: [ '#7FDBFF', '#85144b' ] %>
+                    <p class="title text-center mt-3">Overall duration</p>
+                    <%= pie_chart @movements.group(:duration).count, label: "Duration", colors: [ '#0074D9', '#39CCCC', '#3D9970', '#FFDC00', '#85144b' ] %>
+                    <p class="title text-center mt-3">Overall colors</p>
+                    <%= pie_chart @movements.group(:color).count, label: "Color", colors: [ '#39CCCC', '#7a5901', '#111111', '#DDDDDD', '#FF4136', '#2ECC40', '#FFDC00'] %>
+                    <%# <p class="title text-center mt-3">Overall shapes</p> %>
+                    <%= pie_chart({"Type 1" => @movements.where(shape: 1).count, "Type 2" => @movements.where(shape: 2).count, "Type 3" => @movements.where(shape: 3).count,"Type 4" => @movements.where(shape: 4).count,"Type 5" => @movements.where(shape: 5).count,"Type 6" => @movements.where(shape: 6).count,"Type 7" => @movements.where(shape: 7).count}) %>
+
                 </div>
+              <% end %>
                 <br>
                 <br>
               </div>
