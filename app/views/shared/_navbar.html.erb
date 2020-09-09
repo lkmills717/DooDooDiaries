@@ -13,7 +13,19 @@
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
         <div class="avatar-wrap">
-          <%= image_tag "https://i.imgur.com/f3p2437.png", class: "avatar dropdown-toggle center", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> 
+
+
+          <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, height: 100, width: 100, crop: :fill, class: "avatar dropdown-toggle center", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= image_tag "https://i.imgur.com/f3p2437.png", class: "avatar dropdown-toggle center", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
+
+
+          <%# <%= cl_image_tag @user.photo.key, height: 40, width: 50, crop: :fill %>
+          <%#= cloudinary_url(@seller.avatar.path , width: 50, height: 50, crop: :fill) %>
+
+
         </div>
         </li>
         <li class="nav-item">
