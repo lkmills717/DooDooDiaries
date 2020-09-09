@@ -1,5 +1,6 @@
 class Movement < ApplicationRecord
     belongs_to :user
+    belongs_to :bathroom, optional: true
     validates :shape, presence: true
 
     include PgSearch::Model

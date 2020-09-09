@@ -10,8 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2020_09_09_080546) do
+=======
 
 ActiveRecord::Schema.define(version: 2020_09_08_115128) do
+>>>>>>> c793c1850610df17019adcd8e7b1cbbdac336993
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +30,10 @@ ActiveRecord::Schema.define(version: 2020_09_08_115128) do
     t.string "name"
   end
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> c793c1850610df17019adcd8e7b1cbbdac336993
   create_table "meals", force: :cascade do |t|
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
@@ -46,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_09_08_115128) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.bigint "bathroom_id", null: false
+    t.bigint "bathroom_id"
     t.index ["bathroom_id"], name: "index_movements_on_bathroom_id"
     t.index ["user_id"], name: "index_movements_on_user_id"
   end
