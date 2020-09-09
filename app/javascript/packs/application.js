@@ -35,6 +35,8 @@ import Chart from "chart.js"
 import { test } from '../components/test'
 import { curtain } from '../components/curtain'
 import { movement } from '../components/movement'
+
+  
 import { initMapbox } from '../plugins/init_mapbox';
   // Call your functions here, e.g:
   // initSelect2();
