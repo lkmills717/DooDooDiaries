@@ -1,10 +1,6 @@
 <div class='container'>
 
   <h1 class="title text-center my-5 section-user"> Welcome <%= current_user.name%>!</h1>
-  <% if @user.photo.attached? %>
-      <%= cl_image_tag @user.photo.key, height: 40, width: 50, crop: :fill %>
-      <% end %>
-
   <div class="profile__btns my-3">
     <!-- Button trigger modal -->
     <button type="button" class="btn-block btn my-2" data-toggle="modal" data-target="#profile__image">

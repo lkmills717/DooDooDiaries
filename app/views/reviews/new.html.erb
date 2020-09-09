@@ -1,0 +1,8 @@
+<div class ="container">
+<h3>Leave a review for <%= @bathroom.name%></h3>
+<%= simple_form_for [@bathroom, @review] do |f| %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.input :content, label: "Tell us more about your experience in #{@bathroom.name}:" %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
+</div>
