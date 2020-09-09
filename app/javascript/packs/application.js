@@ -35,6 +35,7 @@ import Chart from "chart.js"
 import { test } from '../components/test'
 import { curtain } from '../components/curtain'
 import { movement } from '../components/movement'
+<<<<<<< HEAD
 
 import { initMapbox } from '../plugins/init_mapbox';
   // Call your functions here, e.g:
@@ -43,6 +44,16 @@ import { initMapbox } from '../plugins/init_mapbox';
     // initMapbox();
   
   
+=======
+import { initMapbox } from '../plugins/init_mapbox';
+  // Call your functions here, e.g:
+  // initSelect2();
+
+  document.addEventListener('turbolinks:load', () => {    
+  // if(window.location.pathname=='/movements/new'){
+  //   initMapbox();
+  // }
+>>>>>>> a79c43010c5bd92337c973463129e643905f6ee0
 
   if(window.location.pathname=='/movements/new'){
     movement();
