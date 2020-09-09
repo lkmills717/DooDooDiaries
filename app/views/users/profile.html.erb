@@ -115,27 +115,27 @@
       <li>
         <p class="title search__title">Looking for something back in time?</p>
       </li>
-        <%= form_tag profile_path, method: :get do %>
-        <li>
-            <%= date_field_tag :start_date,
-              params[:start_date],
-              class: "form-control",
-              placeholder: "Select a Date",
-              class: "my-2"
-            %>
-        </li>
-          <%= date_field_tag :end_date,
-            params[:end_date],
+      <%= form_tag profile_path, method: :get do %>
+      <li>
+          <%= date_field_tag :start_date,
+            params[:start_date],
             class: "form-control",
             placeholder: "Select a Date",
             class: "my-2"
           %>
-        <li>
-          <%= select_tag :type, options_for_select(["Meals", "Movements", "Meals & Movements"])%>
-        </li>
-        <li>
-          <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
-        </li>
+      </li>
+        <%= date_field_tag :end_date,
+          params[:end_date],
+          class: "form-control",
+          placeholder: "Select a Date",
+          class: "my-2"
+        %>
+      <%# <li> %>
+        <%#= select_tag :type, options_for_select(["Meals & Movements"])%>
+      <%# </li> %>
+      <li>
+        <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
+      </li>
       <% end %>
     </ul>
   </div>
