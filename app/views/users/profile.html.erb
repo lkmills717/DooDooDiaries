@@ -1,9 +1,9 @@
 <div class='container'>
 
   <h1 class="title text-center my-5 section-user"> Welcome <%= current_user.name%>!</h1>
-  <% if @user.photo.attached? %>
-      <%= cl_image_tag @user.photo.key, height: 40, width: 50, crop: :fill %>
-      <% end %>
+   <%# if @user.photo.attached? %>
+    <%#= cl_image_tag @user.photo.key, height: 40, width: 50, crop: :fill %>
+   <%# end %>
 
   <div class="profile__btns my-3">
     <!-- Button trigger modal -->
@@ -108,27 +108,36 @@
     </div>
   </div>
 
-  <div class="time__search text-center mb-5">
-    <p class="title search__title">Looking for something back in time?</p>
-    <%= form_tag profile_path, method: :get do %>
-      <%= date_field_tag :start_date,
-        params[:start_date],
-        class: "form-control",
-        placeholder: "Select a Date",
-        class: "my-2"
-      %>
-      <br>
-      <%= date_field_tag :end_date,
-        params[:end_date],
-        class: "form-control",
-        placeholder: "Select a Date",
-        class: "my-2"
-      %>
-      <%= select_tag :type, options_for_select(["Meals", "Movements", "Meals & Movements"])%>
-      <br>
-      <br>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+  <%# SEARCH BAR %>
+
+  <div class="time__search text-left mb-5">
+    <ul class="text-center p-0">
+      <li>
+        <p class="title search__title">Looking for something back in time?</p>
+      </li>
+        <%= form_tag profile_path, method: :get do %>
+        <li>
+            <%= date_field_tag :start_date,
+              params[:start_date],
+              class: "form-control",
+              placeholder: "Select a Date",
+              class: "my-2"
+            %>
+        </li>
+          <%= date_field_tag :end_date,
+            params[:end_date],
+            class: "form-control",
+            placeholder: "Select a Date",
+            class: "my-2"
+          %>
+        <li>
+          <%= select_tag :type, options_for_select(["Meals", "Movements", "Meals & Movements"])%>
+        </li>
+        <li>
+          <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 
   <div class="timeline mb-5">
