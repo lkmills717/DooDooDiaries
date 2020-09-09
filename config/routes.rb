@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   end
   resources :meals
+  resources :bathrooms
 
 
 

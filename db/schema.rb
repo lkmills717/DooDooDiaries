@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_03_104354) do
+
+ActiveRecord::Schema.define(version: 2020_09_08_115128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bathrooms", force: :cascade do |t|
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.string "name"
+  end
+
 
   create_table "meals", force: :cascade do |t|
     t.text "description"
@@ -34,6 +46,8 @@ ActiveRecord::Schema.define(version: 2020_09_03_104354) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
+    t.bigint "bathroom_id", null: false
+    t.index ["bathroom_id"], name: "index_movements_on_bathroom_id"
     t.index ["user_id"], name: "index_movements_on_user_id"
   end
 
@@ -44,6 +58,17 @@ ActiveRecord::Schema.define(version: 2020_09_03_104354) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.integer "rating"
+    t.bigint "bathroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bathroom_id"], name: "index_reviews_on_bathroom_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -60,5 +85,8 @@ ActiveRecord::Schema.define(version: 2020_09_03_104354) do
   end
 
   add_foreign_key "meals", "users"
+  add_foreign_key "movements", "bathrooms"
   add_foreign_key "movements", "users"
+  add_foreign_key "reviews", "bathrooms"
+  add_foreign_key "reviews", "users"
 end
