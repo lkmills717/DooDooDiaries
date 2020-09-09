@@ -36,15 +36,15 @@ import { test } from '../components/test'
 import { curtain } from '../components/curtain'
 import { movement } from '../components/movement'
 <<<<<<< HEAD
-
-import { initMapbox } from '../plugins/init_mapbox';
-  // Call your functions here, e.g:
-  // initSelect2();
-  document.addEventListener('turbolinks:load', () => {
-    // initMapbox();
-  
-  
+<<<<<<< HEAD
 =======
+>>>>>>> b394d82fc24be639c7c7f8d03db796b895165541
+
+  
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b394d82fc24be639c7c7f8d03db796b895165541
 import { initMapbox } from '../plugins/init_mapbox';
   // Call your functions here, e.g:
   // initSelect2();
@@ -53,7 +53,10 @@ import { initMapbox } from '../plugins/init_mapbox';
   // if(window.location.pathname=='/movements/new'){
   //   initMapbox();
   // }
+<<<<<<< HEAD
 >>>>>>> a79c43010c5bd92337c973463129e643905f6ee0
+=======
+>>>>>>> b394d82fc24be639c7c7f8d03db796b895165541
 
   if(window.location.pathname=='/movements/new'){
     movement();
