@@ -22,19 +22,12 @@
         <br>
         <p class="comment__text"> <%= "#{@movement.comments}" %></p>
 
-        <div class="">
-          <p>Location</p>
-          <br>
-          <br>
-          <br>
-          <%= link_to "Add Movement Location", new_movement_bathroom_path(@movement) %>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <p>Geolocation block</p>
+        <div class="geo__bathrooms my-5">
+          <%= link_to "Add movement location", new_movement_bathroom_path(@movement), class: "btn btn-block" %>
+          <img class="map__box mt-3 mb-2" src="https://i.imgur.com/lmAlYDV.png" alt="map_example">
+          <p class="title mt-1">Bat Cave</p>
+          <p class="mt-1">Far far Away, 3, Almada</p>
+          <p class="movement__hint">My precious! Safe place, paradise place!</p>
         </div>
 
         <%= link_to "Return", movements_path, class: "btn-block btn" %>

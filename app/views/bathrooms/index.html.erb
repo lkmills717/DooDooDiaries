@@ -1,5 +1,12 @@
-<h1> My Bathrooms </h1>
-<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div class="container">
+     <h2 class="title text-center">
+          My Bathrooms 
+     </h1>
+     <div class="instructions-wrap">
+          <div id="map"
+               style="width: 100%; height: 450px;"
+               data-markers="<%= @markers.to_json %>"
+               data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+     </div>
+</div>
