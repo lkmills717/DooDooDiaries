@@ -7,13 +7,15 @@ Rails.application.routes.draw do
     resources :bathrooms, only: [ :new, :create ]
     collection do
     get "charts", to: "movements#charts"
-  end
+    end
   end
   resources :meals
   resources :bathrooms, except: [ :new, :create ] do
     resources :reviews, only: [ :new, :create ]
   end
 
+
+  get "/about", to: "pages#about"
 
 
   get '/dashboard', to: 'users#dashboard'
