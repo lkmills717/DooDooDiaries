@@ -63,10 +63,14 @@
   }
 }
 
-@media (min-width: 640px) {
+
+
+
+// android
+@media (min-width: 320px) and (max-width: 360px)   {
 
   .avatar-wrap {
-    max-width: 17%;
+    max-width: 32%;
     margin: auto;
     padding: 1rem;
     position: relative;
@@ -82,11 +86,91 @@
   }
 
   .avatar {
-    width: 100px;
+    width: 99px;
+    border-radius: 50%;
+  }
+
+}
+
+// iphone 5 SE
+
+@media (max-width: 320px) {
+
+  .avatar-wrap {
+    max-width: 36%;
+    margin: auto;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    padding: 3px;
+    border-radius: 50%;
+  }
+  
+  .avatar-inside {
+    background: white;
+    color: #222;
+    padding: 2rem;
+  }
+
+  .avatar {
+    width: 98px;
     border-radius: 50%;
   }
   
 }
 
+// iphone 6, 7, 8 non plus
+
+@media (min-width: 361px) and (max-width: 375px) {
+
+  .avatar-wrap {
+    max-width: 30%;
+    margin: auto;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    padding: 3px;
+    border-radius: 50%;
+  }
+  
+  .avatar-inside {
+    background: white;
+    color: #222;
+    padding: 2rem;
+  }
+
+  .avatar {
+    width: 97px;
+    border-radius: 50%;
+  }
+  
+}
+
+// pixel and iphone PLUS
+
+@media (min-width: 376px) and (max-width: 414px) {
+
+  .avatar-wrap {
+    max-width: 27%;
+    margin: auto;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    padding: 3px;
+    border-radius: 50%;
+  }
+  
+  .avatar-inside {
+    background: white;
+    color: #222;
+    padding: 2rem;
+  }
+
+  .avatar {
+    width: 97px;
+    border-radius: 50%;
+  }
+  
+}
 
 
