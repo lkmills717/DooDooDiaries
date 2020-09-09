@@ -4,12 +4,15 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :movements do
+    resources :bathrooms, only: [ :new, :create ]
     collection do
     get "charts", to: "movements#charts"
   end
   end
   resources :meals
-  resources :bathrooms
+  resources :bathrooms, except: [ :new, :create ] do
+    resources :reviews, only: [ :new, :create ]
+  end
 
 
 

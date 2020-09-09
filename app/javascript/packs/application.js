@@ -41,9 +41,9 @@ import { initMapbox } from '../plugins/init_mapbox';
   // initSelect2();
 
   document.addEventListener('turbolinks:load', () => {    
-  // if(window.location.pathname=='/movements/new'){
-  //   initMapbox();
-  // }
+  if(window.location.pathname=='/bathrooms'){
+    initMapbox();
+  }
 
   if(window.location.pathname=='/movements/new'){
     movement();

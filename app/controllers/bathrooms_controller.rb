@@ -2,13 +2,13 @@ class BathroomsController < ApplicationController
     before_action :set_bathroom, only: [:show, :edit, :update, :destroy]
 
     def index
-        @bathrooms = Bathroom.all
+        @bathrooms = Bathroom.joins(:movements).where("movements.user_id = ?", current_user.id)
 
-         @markers = @bathrooms.geocoded.map do |bathroom|
+        @markers = @bathrooms.geocoded.map do |bathroom|
              {
                  lat: bathroom.latitude,
-                 lng: bathroom.longitude
-                 # infoWindow: render_to_string(partial: "info_window", locals: { bathroom: bathroom })
+                 lng: bathroom.longitude,
+                 infoWindow: render_to_string(partial: "info_window", locals: { bathroom: bathroom })
              }
          end
     end
@@ -18,15 +18,19 @@ class BathroomsController < ApplicationController
 
     def new
         @bathroom = Bathroom.new
+        @movement = Movement.find(params[:movement_id])
     end
 
     def create
+        @movement = Movement.find(params[:movement_id])
         @user = current_user
         @bathroom = Bathroom.new(bathroom_params)
-        @bathroom.user = @user
+        @bathroom.movements << @movement
         if @bathroom.save
+            @movement.bathroom = @bathroom
+            @movement.save
             flash[:notice] = "🎉Thank you for adding your toilet!🚽"
-            redirect_to bathroom_path(@bathroom)
+            redirect_to movement_path(@movement)
         else
             render 'new'
         end
