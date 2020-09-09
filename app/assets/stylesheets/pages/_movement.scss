@@ -46,3 +46,15 @@
 .geo__bathrooms {  
   border-bottom: 2.5px solid  rgba($color: #000000, $alpha: 0.3);
 }
+
+.bathroom__details {
+  padding: 0;
+  // -webkit-box-shadow: 10px 10px 14px -6px rgba(0,0,0,0.75);
+  // -moz-box-shadow: 10px 10px 14px -6px rgba(0,0,0,0.75);
+  // box-shadow: 10px 10px 14px -6px rgba(0,0,0,0.75);
+  // border: 2.5px solid  rgba($color: #000000, $alpha: 0.3);
+}
+
+.bathroom__data {
+  margin: auto;
+}
