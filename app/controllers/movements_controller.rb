@@ -12,9 +12,12 @@ class MovementsController < ApplicationController
     end
 
     def show
-        @bathroom = Bathroom.new
       unless current_user == @movement.user
         redirect_to root_path, notice: "stop looking at other people's stool!"
+      end
+      @bathroom = Bathroom.new
+      if @movement.bathroom
+        @markers = [{lat: @movement.bathroom.latitude, lng: @movement.bathroom.longitude}]
       end
     end
 
