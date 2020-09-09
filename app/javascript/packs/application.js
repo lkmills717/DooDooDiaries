@@ -40,9 +40,10 @@ import { movement } from '../components/movement'
 import { initMapbox } from '../plugins/init_mapbox';
   // Call your functions here, e.g:
   // initSelect2();
-  document.addEventListener('turbolinks:load', () => {
-    initMapbox();
-  
+  document.addEventListener('turbolinks:load', () => {    
+  // if(window.location.pathname=='/movements/new'){
+  //   initMapbox();
+  // }  
 
   if(window.location.pathname=='/movements/new'){
     movement();

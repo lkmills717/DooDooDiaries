@@ -35,7 +35,7 @@ class Movement < ApplicationRecord
 
         constipations_hints = ["Try to get at least 25 to 31 grams of fiber per day", "Increase your physical activity level.", "Always use the bathroom when you get the urge to go — don’t try and hold it.", "If constipation or diarrhea becomes your consistent stool pattern, talk to your primary care doctor. Your doctor may recommend treatments or refer you to a specialist (called a gastroenterologist) who can perform further testing."]
 
-        healthy_hints = ["You are doing fine, keep it going!", "Not bad!"]
+        healthy_hints = ["You are doing fine, keep it going!", "#fiberrules", "I don't always compliment poop, but when I do, it is about this one."]
 
         diarrhea_hints = ["Avoid the foods listed above that are known to irritate the stomach and cause loose stools (especially caffeine, dairy, and alcohol).", "Drink plenty of water or electrolyte-containing beverages to stay hydrated.", "Increase your fiber intake to add bulk to your stool."]
 
