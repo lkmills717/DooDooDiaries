@@ -35,21 +35,14 @@ import Chart from "chart.js"
 import { test } from '../components/test'
 import { curtain } from '../components/curtain'
 import { movement } from '../components/movement'
-
-<<<<<<< HEAD
-=======
-
->>>>>>> c793c1850610df17019adcd8e7b1cbbdac336993
 import { initMapbox } from '../plugins/init_mapbox';
   // Call your functions here, e.g:
   // initSelect2();
-  document.addEventListener('turbolinks:load', () => {
-    initMapbox();
-  
-<<<<<<< HEAD
-  
-=======
->>>>>>> c793c1850610df17019adcd8e7b1cbbdac336993
+
+  document.addEventListener('turbolinks:load', () => {    
+  // if(window.location.pathname=='/movements/new'){
+  //   initMapbox();
+  // }
 
   if(window.location.pathname=='/movements/new'){
     movement();
