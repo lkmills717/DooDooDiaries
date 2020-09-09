@@ -51,4 +51,5 @@ import { initMapbox } from '../plugins/init_mapbox';
   if(window.location.pathname=='/'){
     curtain();
   }
+  
 });

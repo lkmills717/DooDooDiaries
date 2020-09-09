@@ -18,7 +18,7 @@ user = User.create(name: "Richard", email: "rich@rich.com", password: "123456")
 
 
 puts "creating movements"
-20.times do
+200.times do
   movement = Movement.create(
   #get all the attributes for a movement
  feeling: ['😁', '😀', '😐', '😔', '😰'].sample,
@@ -32,6 +32,14 @@ puts "creating movements"
 
   movement.created_at = rand(1.years).seconds.ago
   movement.save
+
+  meal = Meal.create(
+    description: ["pasta", "meat", "salad"].sample
+    )
+  meal.user = user
+
+  meal.created_at = rand(1.years).seconds.ago
+  meal.save
 end
 
 puts "the end"
