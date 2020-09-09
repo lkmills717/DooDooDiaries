@@ -23,19 +23,20 @@
         <p class="comment__text"> <%= "#{@movement.comments}" %></p>
 
         <div class="">
-          <p>Location</p>
-          <br>
-          <br>
-          <br>
-          <%= link_to "Add Movement Location", new_movement_bathroom_path(@movement) %>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <p>Geolocation block</p>
-        </div>
+          <% if @movement.bathroom %>
+            <p> Bathroom location: </p>
+            <div id="map"
+              style="width: 100%; height: 300px;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+              </div>
+              <%= "Name: #{@movement.bathroom.name}" %>
+              <%= "Address: #{@movement.bathroom.address}" %>
+              <%= "Description: #{@movement.bathroom.description}" %>
+              <% else %>
+              <%= link_to "Add Movement Location", new_movement_bathroom_path(@movement) %>
+              <% end %>
+          </div>
 
         <%= link_to "Return", movements_path, class: "btn-block btn" %>
     
