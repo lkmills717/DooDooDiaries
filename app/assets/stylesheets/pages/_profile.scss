@@ -31,8 +31,46 @@
   height: 35vh;
 }
 
-.search__title {
+.time__search {
   border-top: 2.5px solid rgba($color: #000000, $alpha: 0.3);
   padding-top: 10px;
 }
 
+// android
+@media (min-width: 320px) and (max-width: 360px)   {
+  .time__search {
+    display: flex;
+    flex-direction: column;
+    // background: purple;
+  }
+}
+
+// iphone 5 SE
+
+@media (max-width: 320px) {
+  .time__search {
+    display: flex;
+    flex-direction: column;
+    // background: blue;
+  }
+}
+
+// iphone 6, 7, 8 non plus
+
+@media (min-width: 361px) and (max-width: 375px) {
+  .time__search {
+    display: flex;
+    flex-direction: column;
+    // background: yellow;
+  }
+}
+
+// pixel and iphone PLUS
+
+@media (min-width: 376px) and (max-width: 414px) {
+  .time__search {
+    display: flex;
+    flex-direction: column;
+    // background: red;
+  }
+}
