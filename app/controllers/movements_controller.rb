@@ -5,9 +5,9 @@ class MovementsController < ApplicationController
 
     def index
         if params[:query].present?
-            @movements = current_user.movements.search_by_feeling_effort_duration_color_smell_and_shape(params[:query])
+            @movements = current_user.movements.search_by_feeling_effort_duration_color_smell_and_shape(params[:query]).sort_by &:created_at
         else
-            @movements = current_user.movements
+            @movements = current_user.movements.sort_by &:created_at
         end
     end
 
