@@ -141,9 +141,9 @@
       Your timeline
     </div>
 
-      <% @sorted.reverse.each do |sort| %>
+      <% @sorted.reverse.each_with_index do |sort, index| %>
         <% if sort.in?(@meals) %>
-          <p>
+          <p class="<%= index.odd? ? 'odd' : 'even' %>">
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
             <%= link_to "/meals/#{@meal.id}" do %>
@@ -151,7 +151,7 @@
             <% end %>
           </p>
         <% else %>
-          <p>
+          <p class="<%= index.odd? ? 'odd' : 'even' %>">
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
             <%= link_to "/movements/#{@movement.id}" do %>
