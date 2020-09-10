@@ -36,6 +36,17 @@
   padding-top: 10px;
 }
 
+.search__icons {
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+}
+
+.search__btns {
+  width: 70%;
+  width: 75%;
+}
+
 // android
 @media (min-width: 320px) and (max-width: 360px)   {
   .time__search {
