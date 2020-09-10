@@ -114,14 +114,16 @@
       </li>
       <%= form_tag profile_path, method: :get do %>
       <li>
-      <%= label_tag 'Start Date', 'Start Date' %>
+          <img class="search__icons" src="https://i.imgur.com/zsiUoAL.png" alt="search_icon">
+          <%#= label_tag 'Start Date', 'Start Date' %>
           <%= date_field_tag :start_date,
             params[:start_date],
             class: "form-control",
             placeholder: "Select a Date",
             class: "my-2" %>
       </li>
-      <%= label_tag 'End Date', 'End Date' %>
+        <img class="search__icons" src="https://i.imgur.com/CeUGUX6.png" alt="search_icon">
+        <%#= label_tag 'End Date', 'End Date' %>
         <%= date_field_tag :end_date,
           params[:end_date],
           class: "form-control",
@@ -130,7 +132,7 @@
           label: 'End Date'
         %>
       <li>
-        <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
+        <%= submit_tag "Search", class: "btn btn-primary mt-2 search__btns" %>
       </li>
       <% end %>
     </ul>
