@@ -1,5 +1,5 @@
-meta_product_name: "blahblahblaaah"
+meta_product_name: "Doo Doo Diaries"
 meta_title: "Doo Doo Diaries - Keep track of your poop"
-meta_description: "Track you bowel movements, meals, where you pooped outside your house and check stats of how you've been doing."
+meta_description: "Track your bowel movements, meals, where you pooped outside your house and check stats of how you've been doing."
 meta_image: "og_img.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
