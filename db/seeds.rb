@@ -35,7 +35,7 @@ puts "creating movements"
   shape: rand(1..7),
   color: ["a shade of brown", "a little green", "super green", "red", "yellow", "pale, white, clay-colored", "black"].sample,
   smell: ["a normal odor 🌹", "worse than normal ☠"].sample
-  )  
+  )
 
   movement.user = user
   movement.bathroom = bathroom
