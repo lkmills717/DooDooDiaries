@@ -148,7 +148,7 @@
           <p class="<%= index.odd? ? 'odd' : 'even' %>">
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
-            <%= link_to "/meals/#{@meal.id}" do %>
+            <%= link_to "/meals/#{sort.id}" do %>
                 <%= image_tag 'https://i.imgur.com/27SpbKk.png', class: "dashboards_movement_img" %>
             <% end %>
           </p>
@@ -156,8 +156,8 @@
           <p class="<%= index.odd? ? 'odd' : 'even' %>">
             <%= "#{sort.created_at.strftime('%a %d %b %H:%M')}" %>
             <br>
-            <%= link_to "/movements/#{@movement.id}" do %>
-                <%= image_tag @movement.img_url, class: "dashboards_movement_img" %>
+            <%= link_to "/movements/#{sort.id}" do %>
+                <%= image_tag sort.img_url, class: "dashboards_movement_img" %>
             <% end %>
           </p>
         <% end %>
