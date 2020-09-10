@@ -10,3 +10,27 @@
 #map {
   height: 50vh;
 }
+
+.map__info {
+  border: solid 2px #743ad5;
+  padding: 0;
+  background: white;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+}
+
+.map__info__title {
+  font-size: 17.5px;
+  padding-top: 2.5px;
+}
+.map__info__address {
+ font-size: 15px;
+ border-bottom: 2px solid rgba($color: #000000, $alpha: 0.4);
+}
+.map__info__description {
+  font-size: 12.5px;
+}
