@@ -106,7 +106,6 @@
     </div>
   </div>
 
-  <%# SEARCH BAR %>
 
   <div class="time__search text-left mb-5">
     <ul class="text-center p-0">
@@ -115,22 +114,21 @@
       </li>
       <%= form_tag profile_path, method: :get do %>
       <li>
+      <%= label_tag 'Start Date', 'Start Date' %>
           <%= date_field_tag :start_date,
             params[:start_date],
             class: "form-control",
             placeholder: "Select a Date",
-            class: "my-2"
-          %>
+            class: "my-2" %>
       </li>
+      <%= label_tag 'End Date', 'End Date' %>
         <%= date_field_tag :end_date,
           params[:end_date],
           class: "form-control",
           placeholder: "Select a Date",
-          class: "my-2"
+          class: "my-2",
+          label: 'End Date'
         %>
-      <%# <li> %>
-        <%#= select_tag :type, options_for_select(["Meals & Movements"])%>
-      <%# </li> %>
       <li>
         <%= submit_tag "Search", class: "btn btn-primary mt-2" %>
       </li>

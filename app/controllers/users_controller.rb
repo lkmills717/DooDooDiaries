@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       elsif params[:type] == "Meals"
         @meals = @meals.where("created_at > ? and created_at < ?",params[:start_date], params[:end_date])
       @movements = []
-      elsif  params[:type] == "Meals && Movements"
+      else
         @movements = @movements.where("created_at > ? and created_at < ?",params[:start_date], params[:end_date])
         @meals = @meals.where("created_at > ? and created_at < ?",params[:start_date], params[:end_date])
       end
