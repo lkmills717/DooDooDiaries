@@ -1,6 +1,11 @@
 class Movement < ApplicationRecord
     belongs_to :user
     belongs_to :bathroom, optional: true
+    validates :feeling, presence: true
+    validates :effort, presence: true
+    validates :duration, presence: true
+    validates :color, presence: true
+    validates :smell, presence: true
     validates :shape, presence: true
 
     include PgSearch::Model

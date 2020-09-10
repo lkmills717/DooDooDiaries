@@ -5,16 +5,19 @@ class MovementsController < ApplicationController
 
     def index
         if params[:query].present?
-            @movements = current_user.movements.search_by_feeling_effort_duration_color_smell_and_shape(params[:query])
+            @movements = current_user.movements.search_by_feeling_effort_duration_color_smell_and_shape(params[:query]).sort_by &:created_at
         else
-            @movements = current_user.movements
+            @movements = current_user.movements.sort_by &:created_at
         end
     end
 
     def show
-        @bathroom = Bathroom.new
       unless current_user == @movement.user
         redirect_to root_path, notice: "stop looking at other people's stool!"
+      end
+      @bathroom = Bathroom.new
+      if @movement.bathroom
+        @markers = [{lat: @movement.bathroom.latitude, lng: @movement.bathroom.longitude}]
       end
     end
 

@@ -3,9 +3,9 @@ class MealsController < ApplicationController
     
     def index
         if params[:query].present?
-            @meals = current_user.meals.search_by_description(params[:query])
+            @meals = current_user.meals.search_by_description(params[:query]).sort_by &:created_at
         else
-            @meals = current_user.meals
+            @meals = current_user.meals.sort_by &:created_at
         end
     end
 
