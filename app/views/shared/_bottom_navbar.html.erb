@@ -1,19 +1,19 @@
 <nav id="bottom-nav">
   <div class="container">
     <ul id="bottom-list" class="flex-container">
-      <li class="<%= if yield(:menu) == 'teams' then ' active' end %>">
-        <%= link_to dashboard_path do %>
-          <figure>
-            <i class="fas fa-home"></i>
-            <figcaption>Dashboard</figcaption>
-          </figure>
-        <% end %>
-      </li>
       <li class="<%= if yield(:menu) == 'about' then ' active' end %>">
         <%= link_to about_path do %>
           <figure>
             <i class="far fa-building"></i>
             <figcaption>About Us</figcaption>
+          </figure>
+        <% end %>
+      </li>
+      <li class="<%= if yield(:menu) == 'teams' then ' active' end %>">
+        <%= link_to dashboard_path do %>
+          <figure>
+            <i class="fas fa-home"></i>
+            <figcaption>Dashboard</figcaption>
           </figure>
         <% end %>
       </li>
