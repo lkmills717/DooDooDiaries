@@ -1,14 +1,14 @@
 <div class="container mt-3">
-<h1> Add a bathroom! </h1>
+<h1 class="title"> Add a Bathroom </h1>
   <%= simple_form_for [@movement, @bathroom] do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :description %>
 
-    <%= f.submit class: "btn btn-secondary btn-lg text-center" %>
+    <%= f.submit class: "btn-block btn text-center" %>
 
   <% end %>
 
-  <%= link_to "Return", movement_path(@movement) %>
+  <%= link_to "Return", movement_path(@movement), class: "btn-block btn my-3" %>
 
 </div>
