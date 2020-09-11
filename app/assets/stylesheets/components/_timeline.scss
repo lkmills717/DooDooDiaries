@@ -49,12 +49,12 @@ $white: #ffffff;
   padding-right: 0;
 }
 //handle first and last
-.timeline p:first-child {
+.timeline .first {
   border-top: 0;
   border-top-right-radius:0;
   border-top-left-radius:0;
 }
-.timelinep:last-child {
+.timeline .last {
   border-bottom-right-radius:0;
   border-bottom-left-radius:0;
 }
