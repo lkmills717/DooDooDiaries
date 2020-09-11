@@ -10,7 +10,8 @@ class Movement < ApplicationRecord
 
     include PgSearch::Model
     pg_search_scope :search_by_feeling_effort_duration_color_smell_and_shape,
-      against: [ :feeling, :effort, :duration, :color, :smell, :shape, :created_at ],
+      against: [ :feeling, :effort, :duration, :color, :smell, :shape, :created_at, :comments ],
+      associated_against: { bathroom: [:name, :address, :description] },
       using: {
           tsearch: { prefix: true}
       }

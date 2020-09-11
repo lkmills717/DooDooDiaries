@@ -15,7 +15,7 @@ Meal.destroy_all
 
 
 puts "creating Lala"
-user = User.create(name: "Lala", email: "lala@lala.com", password: "123456")
+user = User.create(name: "Lala", email: "lala@lala.land", password: "lalala")
 
 puts 'creating bathrooms'
 puts "creating movements"
@@ -23,7 +23,7 @@ puts "creating movements"
 
   bathroom = Bathroom.create(
   name: Faker::Movies::LordOfTheRings.location,
-  address: Faker::Address.street_name,
+  address: Faker::Address.country,
   description: Faker::GreekPhilosophers.quote
   )
 
@@ -44,7 +44,7 @@ puts "creating movements"
   movement.save
   
   meal = Meal.create(
-  description: ["pasta", "sushi", "salad"].sample
+  description: ["one bottle of wine and a lot of pasta", "all you can eat sushi", "a bagel with cream cheese", "four carrots", "two whole pizzas", "a breakfast burrito", "rice and beans", "a spicy burrito", "Brazilian BBQ", "spicy tacos", "bananas", "a very large cheeseburger", "grapes", "papaya", "blueberries", "KFC", "mango and sticky rice", "Thai red curry"].sample
   )
   meal.user = user
   
