@@ -132,6 +132,7 @@
           label: 'End Date'
         %>
       <li>
+        <%#= select_tag :type, options_for_select(["Meals", "Movements", "Meals & Movements"])%>
         <%= submit_tag "Search", class: "btn btn-primary mt-2 search__btns" %>
       </li>
       <% end %>
